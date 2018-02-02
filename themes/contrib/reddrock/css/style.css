@@ -1,13 +1,19 @@
 /**
+ * General Styles
+ */
+body {
+	font-size: 1.4em;
+}
+
+/**
  * Header Styles
  */
-
-
 @media all and (min-width: 768px) {
-ul.menu--main {
-	float: right;
+	ul.menu--main {
+		float: right;
+	}
 }
-}
+
 /**
  * Footer Styles
  */
