@@ -17,10 +17,14 @@ body {
 		float: right;
 	}
 
+	ul.menu--main li a {
+		font-size: 20px;
+	}
+
 	ul.menu--main li a:after {
 		content: ""; /* This is necessary for the pseudo element to work. */ 
 	    display: block; /* This will put the pseudo element on its own line. */
-	    margin: auto 0; /* This will center the border. */
+	     /* This will center the border. */
 	    height: 50%; /* Change this to whatever width you want. */
 	     /* This creates some space between the element and the border. */
 	    border-right: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
