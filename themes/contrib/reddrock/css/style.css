@@ -34,11 +34,12 @@ ul.menu--account li a {
 	ul.menu--main li a::after {
 		content: "";
 	    display: block;
-	    /* height: 50%; */
-	    border-right: 1px solid black;
-	    position: relative;
-	    left: 14px;
-	    top: -18px;
+	    border-right: 1px solid #777777;
+	    position: absolute;
+	    top: 16px;
+	    right: 0;
+	    width: 10px;
+	    height: 19px;
 	}
 }
 
