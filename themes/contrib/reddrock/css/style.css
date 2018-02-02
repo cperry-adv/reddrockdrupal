@@ -17,7 +17,8 @@ body {
 		float: right;
 	}
 
-	ul.menu--main li a {
+	ul.menu--main li a,
+	ul.menu--account li a {
 		font-size: 26px;
 	}
 
