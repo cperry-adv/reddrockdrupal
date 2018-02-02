@@ -31,7 +31,7 @@ ul.menu--account li a {
 		font-size: 26px;
 	}
 
-	ul.menu--main li a::after {
+	ul.menu--account li a::after {
 		content: "";
 	    display: block;
 	    border-right: 1px solid #777777;
@@ -40,6 +40,10 @@ ul.menu--account li a {
 	    right: 0;
 	    width: 10px;
 	    height: 19px;
+	}
+
+	ul.menu--account li:last-child a::after {
+		border-right: 0;
 	}
 }
 
