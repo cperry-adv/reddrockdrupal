@@ -1,13 +1,11 @@
 /**
  * Header Styles
  */
+
+
+@media all and (min-width: 991px) {
 ul.menu--main {
 	float: right;
-}
-
-@media all and (min-width: 1200px) {
-body {
-	background: green;
 }
 }
 /**
