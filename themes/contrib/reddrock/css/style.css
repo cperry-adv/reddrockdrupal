@@ -32,12 +32,13 @@ ul.menu--account li a {
 	}
 
 	ul.menu--main li a:after {
-		content: ""; /* This is necessary for the pseudo element to work. */ 
-	    display: block; /* This will put the pseudo element on its own line. */
-	     /* This will center the border. */
-	    height: 50%; /* Change this to whatever width you want. */
-	     /* This creates some space between the element and the border. */
-	    border-right: 1px solid black; /* This creates the border. Replace black with whatever color you want. */
+		content: "";
+	    display: block;
+	    /* height: 50%; */
+	    border-right: 1px solid black;
+	    position: relative;
+	    left: 14px;
+	    top: -18px;
 	}
 }
 
