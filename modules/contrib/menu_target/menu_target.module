@@ -19,9 +19,6 @@ function menu_target_form_alter(&$form, $form_state, $form_id) {
      || $form_id == 'main_menu_link_form') {
      module_load_include('inc', 'menu_target', 'menu_target.admin');
      menu_target_edit_form_extra_elements($form, $form_state, ($form_id != 'main_menu_link_form'));
-    || $form_id == 'main_menu_link_form') {
-    module_load_include('inc', 'menu_target', 'menu_target.admin');
-    menu_target_edit_form_extra_elements($form, $form_state, ($form_id != 'main_menu_link_form'));
   }
 }
 
