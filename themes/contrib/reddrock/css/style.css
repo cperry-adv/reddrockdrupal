@@ -5,6 +5,10 @@ body {
 	font-size: 1.4em;
 }
 
+.path-frontpage h1.page-header {
+	display: none;
+}
+
 /**
  * Header Styles
  */
