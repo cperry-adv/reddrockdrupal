@@ -14,6 +14,10 @@ ul.menu--account li a {
 	text-transform: uppercase;
 }
 
+.region-content p {
+	font-size: 1.5em;
+}
+
 /**
  * Header Styles
  */
