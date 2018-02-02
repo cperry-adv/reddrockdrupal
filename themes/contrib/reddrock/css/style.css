@@ -9,6 +9,11 @@ body {
 	display: none;
 }
 
+ul.menu--main li a,
+ul.menu--account li a {
+	text-transform: uppercase;
+}
+
 /**
  * Header Styles
  */
