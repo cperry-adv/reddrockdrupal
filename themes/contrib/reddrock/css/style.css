@@ -1,6 +1,21 @@
 /**
- * Place your custom styles here.
+ * Header Styles
  */
 ul.menu--main {
 	float: right;
+}
+
+/**
+ * Footer Styles
+ */
+
+.footer ul.menu--footer {
+	text-align: center;
+}
+
+.footer ul.menu--footer li {
+ 	display: inline-block;
+}
+.footer ul.menu--footer li a {
+	color: #000;
 }
