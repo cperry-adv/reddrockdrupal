@@ -5,6 +5,11 @@ ul.menu--main {
 	float: right;
 }
 
+@include screen-lg-min{
+body {
+	background: green;
+}
+}
 /**
  * Footer Styles
  */
