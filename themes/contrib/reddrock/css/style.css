@@ -31,7 +31,7 @@ ul.menu--account li a {
 		font-size: 26px;
 	}
 
-	ul.menu--main li a:after {
+	ul.menu--main li a::after {
 		content: "";
 	    display: block;
 	    /* height: 50%; */
