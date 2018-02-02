@@ -5,7 +5,7 @@ ul.menu--main {
 	float: right;
 }
 
-@include screen-lg-min{
+@media all and (min-width: 1200px) {
 body {
 	background: green;
 }
