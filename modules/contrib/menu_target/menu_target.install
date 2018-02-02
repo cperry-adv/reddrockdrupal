@@ -10,6 +10,6 @@
  * Implements hook_uninstall().
  */
 function menu_target_uninstall() {
-  variable_del('menu_target_enabled');
-  variable_del('menu_target_type');
+  \Drupal::state()->delete('menu_target_enabled');
+  \Drupal::state()->delete('menu_target_type');
 }
