@@ -16,6 +16,11 @@ ul.menu--main {
 .footer ul.menu--footer li {
  	display: inline-block;
 }
+
 .footer ul.menu--footer li a {
 	color: #000;
+}
+
+.footer {
+	background: #f8f8f8;
 }
