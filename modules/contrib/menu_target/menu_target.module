@@ -13,9 +13,12 @@
 function menu_target_form_alter(&$form, $form_state, $form_id) {
   // Only proceed if the current form is a node edit or menu item edit form.
 
-  $form_display = $form_state['form_display'];
-  if (($form_display->targetEntityType == 'node')
-    && $form_display->bundle . '_node_form' == $form_id
+  $form_display = $form_state->get('form_display');
+  if (!empty($form_display) && ($form_display->get('targetEntityType') == 'node')
+    && $form_display->get('bundle') . '_node_form' == $form_id
+     || $form_id == 'main_menu_link_form') {
+     module_load_include('inc', 'menu_target', 'menu_target.admin');
+     menu_target_edit_form_extra_elements($form, $form_state, ($form_id != 'main_menu_link_form'));
     || $form_id == 'main_menu_link_form') {
     module_load_include('inc', 'menu_target', 'menu_target.admin');
     menu_target_edit_form_extra_elements($form, $form_state, ($form_id != 'main_menu_link_form'));
