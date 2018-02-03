@@ -5,3 +5,6 @@
  * Contains reddrock.module..
  */
 
+function reddrock_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'reddrock/reddrock';
+}
