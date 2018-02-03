@@ -14,9 +14,9 @@
 
       //play the sound when the visitor moves the mouse over
       //a menu item. 
-    $('.menu--account > li').mouseover(function() {
+      $('.menu--account > li').mouseover(function() {
         mySound.play();
-    });
+      });
     }
   }
 })(jQuery, this, Drupal, drupalSettings);
