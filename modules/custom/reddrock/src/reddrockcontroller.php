@@ -1,18 +1,15 @@
 <?php
 /**
  * @file
- * Contains \Drupal\first_module\Controller\FirstController.
+ * Contains \Drupal\reddrock\Controller\FirstController.
  */
  
-namespace Drupal\first_module\Controller;
+namespace Drupal\reddrock\Controller;
  
 use Drupal\Core\Controller\ControllerBase;
  
 class reddrockcontroller extends ControllerBase {
   public function content() {
-    return array(
-      '#type' => 'markup',
-      '#markup' => t('Hello world'),
-    );
+    
   }
 }
