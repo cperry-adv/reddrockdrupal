@@ -1,0 +1,6 @@
+reddrockcustom:
+  version: 1.x
+  js:
+    js/reddrock-custom.js: {}
+  dependencies:
+    - core/jquery
