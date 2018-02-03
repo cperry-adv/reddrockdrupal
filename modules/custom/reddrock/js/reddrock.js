@@ -9,7 +9,7 @@
    */
   Drupal.behaviors.reddrock = {
     attach: function(context, settings) {
-      alert(ho);
+      alert('ho');
     }
   }
 })(jQuery, this, Drupal, drupalSettings);
