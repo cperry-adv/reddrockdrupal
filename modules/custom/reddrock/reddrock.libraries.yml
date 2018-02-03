@@ -1,6 +1,0 @@
-reddrock:
-  version: 1.x
-  js:
-    js/reddrock.js: {}
-  dependencies:
-    - core/jquery
