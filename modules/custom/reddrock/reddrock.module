@@ -5,6 +5,6 @@
  * Contains reddrock.module..
  */
 
-//function reddrock_page_attachments(array &$attachments) {
-//  $attachments['#attached']['library'][] = 'reddrock/reddrock';
-//}
+function reddrock_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'reddrock/reddrock';
+}
