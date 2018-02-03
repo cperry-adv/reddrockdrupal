@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Contains reddrock_custom.module..
+ */
+
+function reddrock_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'reddrock/reddrock';
+}
