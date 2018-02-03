@@ -6,5 +6,5 @@
  */
 
 function reddrock_custom_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'reddrock/reddrock';
+  $attachments['#attached']['library'][] = 'reddrock_custom/reddrockcustom';
 }
