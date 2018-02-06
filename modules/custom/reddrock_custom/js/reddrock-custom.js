@@ -25,9 +25,23 @@
       logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
+      //twitter
+      var twitterSound = document.createElement('audio');
+      twitterSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Twitter_Tweet.mp3');
+      twitterSound.setAttribute('id', 'twittersound');
+      twitterSound.volume = 0.2;
+      //facebook
+      var facebookSound = document.createElement('audio');
+      facebookSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Facebook_Chatter.mp3');
+      facebookSound.setAttribute('id', 'facebooksound');
+      facebookSound.volume = 0.2;
+      //instagram
+      var instagramSound = document.createElement('audio');
+      instagramSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Instagram_Camera_Shutter.mp3');
+      instagramSound.setAttribute('id', 'instagramsound');
+      instagramSound.volume = 0.2;
      
 
-      var random = Math.floor(Math.random()*10);
       //play hover sound on mouse over main menu items.
       $('.menu--account > li').mouseenter(function() {
         hoverSound.play();
@@ -39,7 +53,16 @@
       $('.logo').click(function() {
         logoSound.play();
       });
-
+      //social media icons
+      $('.fblink').click(function() {
+        facebookSound.play();
+      });
+      $('.twlink').click(function() {
+        twitterSound.play();
+      });
+      $('.iglink').click(function() {
+        instagramSound.play();
+      });
     }
   }
 })(jQuery, this, Drupal, drupalSettings);
