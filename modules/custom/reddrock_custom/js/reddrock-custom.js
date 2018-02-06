@@ -64,6 +64,9 @@
         logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
         logoSound.play();
       });
+      $('.logo').mouseleave(function() {
+        logoSound.pause();
+      });
       //music - the way you see it
       $('.maintheme').mouseenter(function() {
         mainthemeSound.play();
