@@ -12,12 +12,12 @@
       //click
       var clickSound = document.createElement('audio');
       clickSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
-      clickSound.addClass('clicksound');
+      clickSound.setAttribute('id', 'clicksound');
       clickSound.volume = 0.2;
       //drone
       var hoverSound = document.createElement('audio');
       hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Futuristic_Drone.mp3');
-      hoverSound.addClass('clicksound');
+      hoverSound.setAttribute('id', 'hoversound');
       hoverSound.volume = 0.2;
       //play the sound when the visitor moves the mouse over
       //a menu item. 
