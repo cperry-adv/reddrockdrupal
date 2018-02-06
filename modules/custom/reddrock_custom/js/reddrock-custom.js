@@ -52,7 +52,7 @@
       $('.menu--account > li').mouseenter(function() {
         hoverSound.play();
       });
-      $('.menu--account > li').mouseenter(function() {
+      $('.menu--account > li').mouseleave(function() {
         hoverSound.pause();
       });
       //play click sound on click
