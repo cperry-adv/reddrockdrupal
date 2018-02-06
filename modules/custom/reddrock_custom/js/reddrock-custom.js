@@ -66,6 +66,9 @@
         mainthemeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/' + mainthemeArray[Math.floor(Math.random() * mainthemeArray.length)]);
         mainthemeSound.play();
       });
+      $('.maintheme').mouseleave(function() {
+        mainthemeSound.pause();
+      });
       //social media icons
       $('.fblink').click(function() {
         facebookSound.play();
