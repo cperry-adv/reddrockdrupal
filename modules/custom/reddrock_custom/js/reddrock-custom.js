@@ -63,7 +63,7 @@
       });
       //music - the way you see it
       $('.maintheme').mouseenter(function() {
-        mainthemeSound.setAttribute('src', logoArray[Math.floor(Math.random() * mainthemeArray.length)]);
+        mainthemeSound.setAttribute('src', mainthemeArray[Math.floor(Math.random() * mainthemeArray.length)]);
         mainthemeSound.play();
       });
       //social media icons
