@@ -18,6 +18,7 @@
       var hoverSound = document.createElement('audio');
       hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Futuristic_Drone.mp3');
       hoverSound.setAttribute('id', 'hoversound');
+      hoverSound.loop = true;
       hoverSound.volume = 0.2;
       //logo sounds
       var logoArray = ['http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
@@ -50,6 +51,9 @@
       //play hover sound on mouse over main menu items.
       $('.menu--account > li').mouseenter(function() {
         hoverSound.play();
+      });
+      $('.menu--account > li').mouseenter(function() {
+        hoverSound.pause();
       });
       //play click sound on click
       //$('a').click(function() {
