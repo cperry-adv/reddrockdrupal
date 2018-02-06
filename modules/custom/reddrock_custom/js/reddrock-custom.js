@@ -63,7 +63,7 @@
       });
       //music - the way you see it
       $('.maintheme').mouseenter(function() {
-        mainthemeSound.setAttribute('src', mainthemeArray[Math.floor(Math.random() * mainthemeArray.length)]);
+        mainthemeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/' + mainthemeArray[Math.floor(Math.random() * mainthemeArray.length)]);
         mainthemeSound.play();
       });
       //social media icons
