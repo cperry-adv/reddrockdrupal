@@ -27,7 +27,7 @@
       logoSound.volume = 0.2;
       //music - the way you see it sounds
       var mainthemeSound = document.createElement('audio');
-      mainthemeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HOME - Music_The_Way_You_See_It_01.mp3';
+      mainthemeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HOME - Music_The_Way_You_See_It_01.mp3');
       mainthemeSound.setAttribute('id', 'mainthemesound');
       mainthemeSound.volume = 0.2;
       //twitter
