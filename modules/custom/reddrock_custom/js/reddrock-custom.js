@@ -25,6 +25,12 @@
       logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
+      //music - the way you see it sounds
+      var mainthemeArray = ['018_02_05 HOME - Music_The_Way_You_See_It_01.mp3','018_02_05 HOME - Music_The_Way_You_See_It_02.mp3','018_02_05 HOME - Music_The_Way_You_See_It_03.mp3'];
+      var mainthemeSound = document.createElement('audio');
+      mainthemeSound.setAttribute('src', logoArray[Math.floor(Math.random() * mainthemeArray.length)]);
+      mainthemeSound.setAttribute('id', 'mainthemesound');
+      mainthemeSound.volume = 0.2;
       //twitter
       var twitterSound = document.createElement('audio');
       twitterSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Twitter_Tweet.mp3');
@@ -50,8 +56,13 @@
       //$('a').click(function() {
       //  clickSound.play();
       //});
+      //logo
       $('.logo').click(function() {
         logoSound.play();
+      });
+      //music - the way you see it
+      $('.maintheme').mouseenter(function() {
+        mainthemeSound.play();
       });
       //social media icons
       $('.fblink').click(function() {
