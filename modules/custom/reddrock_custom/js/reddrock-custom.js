@@ -60,7 +60,7 @@
       //  clickSound.play();
       //});
       $('.logo').click(function() {
-        $(".logosound").eq(random).play();
+        $(".logosound").eq(2).play();
       });
 
     }
