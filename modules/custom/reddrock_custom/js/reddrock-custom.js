@@ -26,7 +26,7 @@
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
       //music - the way you see it sounds
-      var mainthemeArray = ['018_02_05 HOME - Music_The_Way_You_See_It_01.mp3','018_02_05 HOME - Music_The_Way_You_See_It_02.mp3','018_02_05 HOME - Music_The_Way_You_See_It_03.mp3'];
+      var mainthemeArray = ['2018_02_05 HOME - Music_The_Way_You_See_It_01.mp3','2018_02_05 HOME - Music_The_Way_You_See_It_02.mp3','2018_02_05 HOME - Music_The_Way_You_See_It_03.mp3'];
       var mainthemeSound = document.createElement('audio');
       mainthemeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/' + mainthemeArray[Math.floor(Math.random() * mainthemeArray.length)]);
       mainthemeSound.setAttribute('id', 'mainthemesound');
