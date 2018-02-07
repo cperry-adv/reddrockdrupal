@@ -52,7 +52,7 @@
       $('.menu--account > li').mouseenter(function() {
       hoverSound.play();  
       hoverSound.addEventListener('timeupdate', function(){
-                var buffer = .99
+                var buffer = .14
                 if(this.currentTime > this.duration - buffer){
                     this.currentTime = 0
                     this.play()
