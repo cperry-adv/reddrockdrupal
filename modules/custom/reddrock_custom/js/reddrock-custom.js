@@ -50,6 +50,7 @@
 
       //play hover sound on mouse over main menu items.
       $('.menu--account > li').mouseenter(function() {
+      hoverSound.play();  
       hoverSound.addEventListener('timeupdate', function(){
                 var buffer = .44
                 if(this.currentTime > this.duration - buffer){
