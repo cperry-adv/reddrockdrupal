@@ -18,8 +18,14 @@
       var hoverSound = document.createElement('audio');
       hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Futuristic_Drone.mp3');
       hoverSound.setAttribute('id', 'hoversound');
-      hoverSound.loop = true;
+      //hoverSound.loop = true;
       hoverSound.volume = 0.2;
+      hoverSound.addEventListener('timeupdate', function(){
+                var buffer = .44
+                if(this.currentTime > this.duration - buffer){
+                    this.currentTime = 0
+                    this.play()
+                }}, false);
       //logo sounds
       var logoArray = ['http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
       var logoSound = document.createElement('audio');
