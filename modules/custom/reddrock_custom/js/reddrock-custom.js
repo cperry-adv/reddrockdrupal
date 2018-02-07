@@ -21,7 +21,7 @@
       //hoverSound.loop = true;
       hoverSound.volume = 0.2;
       hoverSound.addEventListener('timeupdate', function(){
-                var buffer = .44
+                var buffer = .84
                 if(this.currentTime > this.duration - buffer){
                     this.currentTime = 0
                     this.play()
