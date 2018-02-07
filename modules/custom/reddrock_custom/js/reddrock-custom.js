@@ -16,8 +16,9 @@
       clickSound.volume = 0.2;
       //drone
       var hoverSound = document.createElement('audio');
-      hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Futuristic_Drone.mp3');
+      hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_07 HEADER - Futuristic_Drone ogg.ogg');
       hoverSound.setAttribute('id', 'hoversound');
+      hoverSound.loop = true;
       //hoverSound.loop = true;
       hoverSound.volume = 0.2;
       //logo sounds
@@ -51,13 +52,13 @@
       //play hover sound on mouse over main menu items.
       $('.menu--account > li').mouseenter(function() {
       hoverSound.play();  
-      hoverSound.addEventListener('timeupdate', function(){
-                var buffer = .28
-                if(this.currentTime > this.duration - buffer){
-                    this.currentTime = 0
-                    this.play()
-                }}, false);
-      });
+     // hoverSound.addEventListener('timeupdate', function(){
+     //           var buffer = .50
+     //           if(this.currentTime > this.duration - buffer){
+     //               this.currentTime = 0
+      //              this.play()
+      //          }}, false);
+     // });
       $('.menu--account > li').mouseleave(function() {
         hoverSound.pause();
       });
