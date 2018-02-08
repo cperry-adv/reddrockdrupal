@@ -16,7 +16,7 @@
       clickSound.volume = 0.2;
       //drone
       var hoverSound = document.createElement('audio');
-      hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Futuristic_Drone.mp3');
+      hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_07 HEADER - Futuristic_Drone_02.mp3');
       hoverSound.setAttribute('id', 'hoversound');
       hoverSound.loop = true;
       hoverSound.volume = 0.2;
