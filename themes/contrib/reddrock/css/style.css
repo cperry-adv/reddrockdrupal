@@ -140,8 +140,9 @@ input:checked + .slider:before {
 .mytooltip .tooltiptext {
     visibility: hidden;
     width: 265px;
-    background-color: black;
-    color: #fff;
+    background-color: #ccc;
+    opacity: .7;
+    color: #333;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
@@ -160,7 +161,7 @@ input:checked + .slider:before {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent black transparent;
+    border-color: transparent transparent #ccc transparent;
 }
 
 .mytooltip:hover .tooltiptext {
