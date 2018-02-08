@@ -56,9 +56,9 @@
         hoverSound.pause();
       });
       //play click sound on click
-      //$('a').click(function() {
-      //  clickSound.play();
-      //});
+      $('#audioswitch').click(function() {
+        clickSound.play();
+      });
       //logo
       $('.logo').mouseenter(function() {
         logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
