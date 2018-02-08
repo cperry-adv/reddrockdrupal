@@ -133,7 +133,7 @@ input:checked + .slider:before {
 }
 
 
-.tooltip .tooltiptext {
+.tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -148,7 +148,7 @@ input:checked + .slider:before {
     margin-left: -60px;
 }
 
-.tooltip .tooltiptext::after {
+.tooltiptext::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -159,6 +159,6 @@ input:checked + .slider:before {
     border-color: transparent transparent black transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltiptext {
     visibility: visible;
 }
