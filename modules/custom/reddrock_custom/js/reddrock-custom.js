@@ -56,7 +56,7 @@
         hoverSound.pause();
       });
       //play click sound on click
-      $('#audioswitch').click(function() {
+      $('.switch').click(function() {
         clickSound.play();
       });
       //logo
