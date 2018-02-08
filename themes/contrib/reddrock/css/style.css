@@ -141,7 +141,9 @@ input:checked + .slider:before {
     visibility: hidden;
     width: 265px;
     background-color: #ccc;
-    opacity: .7;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
     color: #333;
     text-align: center;
     border-radius: 6px;
@@ -166,6 +168,7 @@ input:checked + .slider:before {
 
 .mytooltip:hover .tooltiptext {
     visibility: visible;
+    opacity: 1;
 }
 
 .block-reddrock-custom {
