@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\reddrock_custom\Plugin\Block;
+namespace Drupal\reddrock_custom\src\Plugin\Block;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
