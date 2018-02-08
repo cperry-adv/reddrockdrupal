@@ -11,8 +11,8 @@ use Drupal\Core\Session\AccountInterface;
  * Provides a block with a simple text.
  *
  * @Block(
- *   id = "my_block_example_block",
- *   admin_label = @Translation("My block"),
+ *   id = "reddrock_custom_audio_switch",
+ *   admin_label = @Translation("Reddrock Custom Audio Switch"),
  * )
  */
 class reddrockAudioBlock extends BlockBase {
