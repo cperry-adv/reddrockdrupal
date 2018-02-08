@@ -127,4 +127,7 @@ input:checked + .slider:before {
 
 .checkbox-label {
 	font-size: 26px;
+	vertical-align: top;
+	padding-right: 8px;
+	background: none;
 }
