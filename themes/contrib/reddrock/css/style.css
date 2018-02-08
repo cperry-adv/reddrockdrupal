@@ -112,7 +112,7 @@ ul.menu--account li a {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #bb2f16;
 }
 
 input:focus + .slider {
