@@ -166,3 +166,11 @@ input:checked + .slider:before {
 .mytooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.block-reddrock-custom {
+	width: 200px;
+    position: absolute;
+    right: 32px;
+    top: 60px;
+    text-align: right;
+}
