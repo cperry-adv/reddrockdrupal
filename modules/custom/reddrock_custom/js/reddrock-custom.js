@@ -46,6 +46,9 @@
       instagramSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Instagram_Camera_Shutter.mp3');
       instagramSound.setAttribute('id', 'instagramsound');
       instagramSound.volume = 0.2;
+
+      var pathz = window.location.pathname;
+      console.log(pathz);
      
 
       //play hover sound on mouse over main menu items.
