@@ -21,7 +21,7 @@ class reddrockAudioBlock extends BlockBase {
    */
   public function build() {
     return [
-      '#markup' => '<div class="mytooltip"><span class="tooltiptext">Turn the switch on to experience original music and sounds of ReddRock! <br /> Hover your mouse or click to experience!</span><span class="checkbox-label">SOUNDS:</span><label class="switch"><input id="audioswitch" type="checkbox"><span class="slider"></span></label></div>',
+      '#markup' => '<div class="mytooltip"><span class="tooltiptext">Turn the switch on to experience the original sounds of ReddRock <br /> Hover your mouse or click to experience</span><span class="checkbox-label">SOUNDS:</span><label class="switch"><input id="audioswitch" type="checkbox"><span class="slider"></span></label></div>',
       '#allowed_tags' => ['div','input','span','label',],
     ];
   }

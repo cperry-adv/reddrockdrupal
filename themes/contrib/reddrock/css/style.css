@@ -139,7 +139,7 @@ input:checked + .slider:before {
 
 .mytooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 295px;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -147,8 +147,8 @@ input:checked + .slider:before {
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    top: 150%;
-    left: 50%;
+    top: 118%;
+    left: -69px;
     margin-left: -60px;
 }
 
