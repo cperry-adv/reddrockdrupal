@@ -21,8 +21,8 @@ class reddrockAudioBlock extends BlockBase {
    */
   public function build() {
     return [
-      '#markup' => '<div class="checkbox-label">Use Audio?</div><input type="checkbox">',
-      '#allowed_tags' => ['div','input'],
+      '#markup' => '<div class="checkbox-label">Use Audio?</div><label class="switch"><input id="audioswitch" type="checkbox"><span class="slider"></span></label>',
+      '#allowed_tags' => ['div','input','span','label',],
     ];
   }
 
