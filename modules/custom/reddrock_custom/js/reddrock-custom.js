@@ -72,6 +72,16 @@
       greenbarSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Happy_Celeste.mp3');
       greenbarSound.setAttribute('id', 'greenbarsound');
       greenbarSound.volume = 0.2;
+      //red bar
+      var redbarSound = document.createElement('audio');
+      redbarSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LOGIN - Invalid_Login.mp3');
+      redbarSound.setAttribute('id', 'redbarsound');
+      redbarSound.volume = 0.2;
+
+      //red bar sad sound
+      $('.alert-danger').each(function() {
+        redbarSound.play();
+      });
 
       //green bar happy sound
       $('.alert-success').each(function() {
