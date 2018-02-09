@@ -63,7 +63,7 @@
         pageturnSound.play();
         //hover for about text
         $('.content').mouseenter(function() {
-
+          scribbleSound.play();
         });
       }
      
