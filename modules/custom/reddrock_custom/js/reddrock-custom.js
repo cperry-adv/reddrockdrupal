@@ -65,6 +65,9 @@
         $('.content').mouseenter(function() {
           scribbleSound.play();
         });
+        $('.content').mouseleave(function() {
+          scribbleSound.pause();
+        });
       }
      
 
