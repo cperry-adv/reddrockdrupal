@@ -79,6 +79,10 @@ ul.menu--account li a {
  * Audio Switch Styles
  */
  @media all and (min-width: 768px) {
+ #block-mobiledisclaimer {
+		display: none;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -183,5 +187,8 @@ input:checked + .slider:before {
 @media all and (max-width: 768px) {
 	.block-reddrock-custom {
 		display: none;
+	}
+	#block-mobiledisclaimer {
+		display: block;
 	}
 }
