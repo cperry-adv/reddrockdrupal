@@ -77,6 +77,16 @@
       redbarSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LOGIN - Invalid_Login.mp3');
       redbarSound.setAttribute('id', 'redbarsound');
       redbarSound.volume = 0.2;
+      //listen page arrival
+      var listenarrivalSound = document.createElement('audio');
+      listenarrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LISTEN - Dreamy_Entrance.mp3');
+      listenarrivalSound.setAttribute('id', 'listenarrivalsound');
+      listenarrivalSound.volume = 0.2;
+
+      //listen page arrival
+      if (pathz == '/listen') {
+        listenarrivalSound.play();
+      }
 
       //red bar sad sound
       $('.alert-danger').each(function() {
