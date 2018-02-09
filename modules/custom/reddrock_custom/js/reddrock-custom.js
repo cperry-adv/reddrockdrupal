@@ -67,6 +67,16 @@
       keystrokeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LOGIN - Keyboard_Keystrokes.mp3');
       keystrokeSound.setAttribute('id', 'keystrokesound');
       keystrokeSound.volume = 0.2;
+      //green bar
+      var greenbarSound = document.createElement('audio');
+      greenbarSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Happy_Celeste.mp3');
+      greenbarSound.setAttribute('id', 'greenbarsound');
+      greenbarSound.volume = 0.2;
+
+      //green bar happy sound
+      $('.alert-success').each(function() {
+        greenbarSound.play();
+      });
 
       //contact page arrival
       if (pathz == '/contact') {
