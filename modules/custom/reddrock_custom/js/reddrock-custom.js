@@ -9,6 +9,7 @@
    */
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
+      var pathz = window.location.pathname;
       //click
       var clickSound = document.createElement('audio');
       clickSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
@@ -56,9 +57,27 @@
       scribbleSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 ABOUT - Scribble.mp3');
       scribbleSound.setAttribute('id', 'scribblesound');
       scribbleSound.volume = 0.2;
+      //contact arrival
+      var arrivalSound = document.createElement('audio');
+      arrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Typewriter_Finish_Line.mp3');
+      arrivalSound.setAttribute('id', 'arrivalsound');
+      arrivalSound.volume = 0.2;
+      //contact keystrokes
+      var keystrokeSound = document.createElement('audio');
+      keystrokeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LOGIN - Keyboard_Keystrokes.mp3');
+      keystrokeSound.setAttribute('id', 'keystrokesound');
+      keystrokeSound.volume = 0.2;
+
+      //contact page arrival
+      if (pathz == '/contact') {
+        arrivalSound.play();
+        //contact keystrokes
+        document.onkeydown = function (e) {
+          keystrokeSound.play();
+        }
+      }
 
       //page load sound for about page
-      var pathz = window.location.pathname;
       if (pathz == '/about') {
         pageturnSound.play();
         //hover for about text
