@@ -64,7 +64,7 @@
       arrivalSound.volume = 0.2;
       //contact keystrokes
       var keystrokeSound = document.createElement('audio');
-      keystrokeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_08_CONTACT_Typewriterfinisigline_2-18.mp3');
+      keystrokeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/keystroke.wav');
       keystrokeSound.setAttribute('id', 'keystrokesound');
       keystrokeSound.volume = 0.2;
       //green bar
