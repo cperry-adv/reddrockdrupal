@@ -51,10 +51,20 @@
       pageturnSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 ABOUT - Page_Turn.mp3');
       pageturnSound.setAttribute('id', 'pageturnsound');
       pageturnSound.volume = 0.2;
+      //scribble
+      var scribbleSound = document.createElement('audio');
+      scribbleSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 ABOUT - Scribble.mp3');
+      scribbleSound.setAttribute('id', 'scribblesound');
+      scribbleSound.volume = 0.2;
 
+      //page load sound for about page
       var pathz = window.location.pathname;
       if (pathz == '/about') {
         pageturnSound.play();
+        //hover for about text
+        $('.content').mouseenter(function() {
+
+        });
       }
      
 
