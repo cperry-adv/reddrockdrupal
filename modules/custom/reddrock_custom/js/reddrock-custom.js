@@ -119,18 +119,20 @@
         });
       }
 
-      var currentPage = window.location;
-      addQueryString(currentPage, 'goops');
+      var currentQuery = getUrlVars();
+      console.log(currentQuery+'is the current query');
 
-      function addQueryString(url, queryString) {   
-      if (queryString) {
-        var isQuestionMarkPresent = url && url.indexOf('?') !== -1,
-          separator = isQuestionMarkPresent ? '&' : '?';
-        url += separator + queryString;
+      function getUrlVars() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
       }
-      console.log(url+'is the URL');
-      return url;
-      };
       
 
       //play hover sound on mouse over main menu items.
