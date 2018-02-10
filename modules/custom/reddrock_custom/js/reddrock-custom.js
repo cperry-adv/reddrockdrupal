@@ -134,7 +134,27 @@
           logoSound.pause();
        }
         }
-    });
+      });
+
+      //play hover sound on mouse over main menu items.
+      $('.menu--account > li').once().on({
+        mouseover: function() {
+          event.preventDefault();
+          if (audioOn == 1) {
+            hoverSound.play();
+          }
+        },
+        mouseout: function() {
+          event.preventDefault();
+          if (audioOn == 1) {
+            hoverSound.pause();
+          }
+        }
+      });
+
+
+
+     
 
 
 
@@ -172,17 +192,7 @@
       });
 
 
-      //play hover sound on mouse over main menu items.
-      $('.menu--account > li').mouseenter(function() {
-        if (audioOn == 1) {
-          hoverSound.play();
-        }
-      });
-      $('.menu--account > li').mouseleave(function() {
-        if (audioOn == 1) {
-          hoverSound.pause();
-        }
-      });
+      
       
       
       //music - the way you see it
