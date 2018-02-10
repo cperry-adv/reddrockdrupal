@@ -143,7 +143,9 @@
           var new_url = url + '?' + param + '=' + value;
           history.pushState(null, null, new_url);  
         }
+        else {
           history.pushState(null, null, '');
+        }
       }
 
 
