@@ -9,25 +9,3 @@ function reddrock_custom_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'reddrock_custom/reddrockcustom';
 }
 
-/**
- * Implements hook_menu_alter().
- */
-function reddrock_custom_link_alter(&$variables) {
-
-  /**
-   * The URL of the link.
-   *
-   * @var Url
-   */
-  $url = $variables['url'];
-
-  print_r($url);
-
-  if ($url->isRouted() && $url->getRouteName() == 'user.page') {
-    $route_name = $url->getRouteName();
-    if ($route_name != 'user.page') {
-      return;
-    }
-    
-  }
-}
