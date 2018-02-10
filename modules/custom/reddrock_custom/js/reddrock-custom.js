@@ -182,7 +182,7 @@
           logoSound.play();
         }
       });
-      $('.logo').once().mouseleave(function() {
+      $('.logo').mouseleave(function() {
         if (audioOn == 1) {
           logoSound.pause();
         }
