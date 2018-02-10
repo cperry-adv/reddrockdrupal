@@ -164,7 +164,7 @@
         var currentQuery = getUrlVars();
 
         if (currentQuery['playAudio'] == 'yes') {
-          audioOn = 0;
+          
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
@@ -175,9 +175,10 @@
             $(this).attr("href", href.split('?')[0]);
           });
           updateqs('playAudio','no');
+          audioOn = 0;
         }
         else {
-          audioOn = 1;
+          
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
@@ -188,6 +189,7 @@
             $(this).attr("href", href + '?playAudio=yes');
           });
           updateqs('playAudio','yes');
+          audioOn = 1;
         }
         
       });
