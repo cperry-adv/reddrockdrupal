@@ -215,7 +215,7 @@ $('.filter-tab a').once().on('click', function(e) {
         
       });
       //logo
-      $('.logo').mouseenter(function() {
+      $('.logo').once().mouseenter(function() {
         
         if (audioOn == 1) {
           logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
