@@ -121,21 +121,26 @@
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
       
-      $('a.logo > img').mouseenter(function(e) {
-        
-        e.stopPropagation();
-          if (audioOn == 1) {
+      $('a.logo > img').on({
+        mouseover: function() {
+            event.preventDefault();
+            if (audioOn == 1) {
           logoSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3');
           logoSound.play();
            console.log(logoSound);
         }
-      });
-      $('a.logo > img').mouseleave(function() {
-       if (audioOn == 1) {
+        },
+        mouseout: function() {
+            event.preventDefault();
+            if (audioOn == 1) {
           logoSound.pause();
        }
-        
-      });
+        }
+    });
+
+
+
+     
       
       //add click sound on preview button click
       $('#edit-preview').once().on('click', function(e) {
