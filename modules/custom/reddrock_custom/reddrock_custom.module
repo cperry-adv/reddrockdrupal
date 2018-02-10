@@ -43,8 +43,6 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	/**
 	 * Create the item-list the form should render
 	 */
-	
-	 ksort($pop_array);
 	 print_r($pop_array);
 		$form['links'] = [
 			'#theme' => 'item_list',
