@@ -156,7 +156,13 @@
       //play click sound on click, also set the correct audio switch value
       $('.slider').once().click(function() {
         clickSound.play();
-        updateqs('playAudio','yes');
+        if (currentQuery['playAudio'] == 'yes') {
+          updateqs('','');
+        }
+        else {
+          updateqs('playAudio','yes');  
+        }
+        
       });
       //logo
       $('.logo').mouseenter(function() {
