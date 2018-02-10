@@ -238,8 +238,8 @@ input:checked + .slider:before {
   height: 100px;
 }
 .pop-list li a.active {
-	background-color: #efefef;
-  color: #fff;
+	background-color: #f8f8f8;
+  font-weight: bold;
 }
 .view-filter-articles .views-row{
 	float: left;
