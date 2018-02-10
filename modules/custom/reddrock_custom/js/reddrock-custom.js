@@ -218,8 +218,9 @@ $('.filter-tab a').once().on('click', function(e) {
       $('.logo').mouseenter(function() {
         
         if (audioOn == 1) {
-          logoSound.once().setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
-          logoSound.play(); console.log(logoSound);
+          logoSound.play();
+          logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
+           console.log(logoSound);
         }
       });
       $('.logo').mouseleave(function() {
