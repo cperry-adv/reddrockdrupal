@@ -156,6 +156,7 @@
       //play click sound on click, also set the correct audio switch value
       $('.slider').once().click(function() {
         clickSound.play();
+        var currentQuery = getUrlVars();
         if (currentQuery['playAudio'] == 'yes') {
           updateqs('','');
         }
