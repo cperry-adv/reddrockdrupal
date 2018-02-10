@@ -230,7 +230,7 @@
       //contact page arrival
       if (pathz == '/contact') {
         if (audioOn == 1) {
-          arrivalSound.play();
+          arrivalSound.play(); console.log(arrivalSound);
         }
         //contact keystrokes
         document.onkeydown = function (e) {
