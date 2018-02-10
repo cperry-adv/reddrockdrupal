@@ -139,8 +139,11 @@
       //set correct audio switch state in query string
       function updateqs(param,value) {
         var url = currentPath;
-        var new_url = url + '?' + param + '=' + value;
-        history.pushState(null, null, new_url);
+        if (param != 'no') {
+          var new_url = url + '?' + param + '=' + value;
+          history.pushState(null, null, new_url);  
+        }
+          history.pushState(null, null, '');
       }
 
 
@@ -158,7 +161,7 @@
         clickSound.play();
         var currentQuery = getUrlVars();
         if (currentQuery['playAudio'] == 'yes') {
-          updateqs('','');
+          updateqs('playAudio','no');
         }
         else {
           updateqs('playAudio','yes');  
