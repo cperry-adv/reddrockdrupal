@@ -121,7 +121,7 @@
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
       
-      $('.logo').mouseenter(function() {
+      $('a.logo > img').mouseenter(function() {
         
         
           if (audioOn == 1) {
@@ -130,7 +130,7 @@
            console.log(logoSound);
         }
       });
-      $('.logo').mouseleave(function() {
+      $('a.logo > img').mouseleave(function() {
        if (audioOn == 1) {
           logoSound.pause();
        }
