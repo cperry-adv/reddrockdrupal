@@ -119,6 +119,8 @@
         });
       }
 
+      //get current audio switch state from path
+      var currentPath = window.location;
       var currentQuery = getUrlVars();
       console.log(currentQuery['poo']);
 
@@ -133,6 +135,15 @@
         }
         return vars;
       }
+
+      //set correct audio switch state in query string
+      function updateqs(param,value) {
+        var url = currentPath;
+        var new_url = url + '?' + param + '=' + value;
+        history.pushState(null, null, new_url);
+      }
+
+
       
 
       //play hover sound on mouse over main menu items.
@@ -142,9 +153,10 @@
       $('.menu--account > li').mouseleave(function() {
         hoverSound.pause();
       });
-      //play click sound on click
+      //play click sound on click, also set the correct audio switch value
       $('.slider').click(function() {
         clickSound.play();
+        updateqs('playAudio','yes');
       });
       //logo
       $('.logo').mouseenter(function() {
