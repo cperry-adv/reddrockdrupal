@@ -128,13 +128,15 @@
         $('#audioswitch').prop('checked', true);
         $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
-            $(this).attr("href", href.split('?')[0]);
+            $(this).attr("href", href + '?playAudio=yes');
+            
           });
       }
       else {
         $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
+            $(this).attr("href", href.split('?')[0]);
           }); 
       }
 
