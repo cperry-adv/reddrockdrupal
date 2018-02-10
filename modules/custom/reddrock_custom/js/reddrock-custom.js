@@ -119,7 +119,7 @@
         });
       }
 
-      var addQueryString = function(url, queryString) {   
+      function addQueryString(url, queryString) {   
       if (queryString) {
         var isQuestionMarkPresent = url && url.indexOf('?') !== -1,
           separator = isQuestionMarkPresent ? '&' : '?';
