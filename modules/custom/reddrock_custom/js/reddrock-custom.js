@@ -93,7 +93,7 @@ $('.filter-tab a').on('click', function(e) {
         var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
         
         // Set the new value in the SELECT element
-        var filter = $('#views-exposed-form-listen-page-block-1 select[name="tid"]'); console.log(filter.attr('id')+' is select value');
+        var filter = $('#views-exposed-form-listen-page-block-1 select[name="tid"]'); 
         filter.val(id);
 
         // Unset and then set the active class
@@ -104,6 +104,7 @@ $('.filter-tab a').on('click', function(e) {
         filter.trigger('change');
         $('#views-exposed-form-listen-page-block-1 select[name="tid"]').trigger('change');
         $('#views-exposed-form-listen-page-block-1 input.form-submit').trigger('click');
+        console.log(filter.attr('value')+' is select value');
 
       });
     
