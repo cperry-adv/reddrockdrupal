@@ -136,7 +136,7 @@
         
       });
       
-      
+      //add click sound on preview button click
       $('#edit-preview').once().on('click', function(e) {
         e.preventDefault();
         if (audioOn == 1) {
@@ -297,8 +297,7 @@
         }
       });
       
-    }
-  }
+
 
       
 
@@ -338,5 +337,7 @@
 
         
   });
+      }
+  }
 })(jQuery, this, Drupal, drupalSettings);
 
