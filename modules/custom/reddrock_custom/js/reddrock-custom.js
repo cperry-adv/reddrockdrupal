@@ -319,7 +319,7 @@ $('.filter-tab a').once().on('click', function(e) {
 
   $(document).ajaxComplete(function(event, xhr, settings) {
   
-        var filter_id = $('select[name="tid"]').find(":selected").val();
+        var filter_id = $('.views-exposed-form select[name="tid"]').find(":selected").val();
 
         $('.filter-tab a').removeClass('active');
         $('.filter-tab').find('#' + filter_id).addClass('active');
