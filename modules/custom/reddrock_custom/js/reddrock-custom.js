@@ -242,7 +242,7 @@
 
       //listen page arrival
       if (pathz == '/listen-tracks' || '/listen-sfx') {
-        if (audioOn == 1) {
+        if (audioOn == 0) {
           listenarrivalSound.play(); console.log(pathz);
         }
       }
