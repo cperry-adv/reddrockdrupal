@@ -137,7 +137,10 @@
       });
       
       
-      
+      $('#edit-preview').once().on('click', function(e) {
+        e.preventDefault();
+        clickSound.play();
+      });
 
       $('.filter-tab a').once().on('click', function(e) {
         e.preventDefault();
