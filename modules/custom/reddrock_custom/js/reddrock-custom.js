@@ -126,14 +126,14 @@
       //set correct audio switch state on page load
       if (currentQuery['playAudio'] == 'yes') {
         $('#audioswitch').prop('checked', true);
-        $('.menu--account li a').each(function() {
+        $('.menu--account li a').once().each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
             
           });
       }
       else {
-        $('.menu--account li a').each(function() {
+        $('.menu--account li a').once().each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
             $(this).attr("href", href.split('?')[0]);
