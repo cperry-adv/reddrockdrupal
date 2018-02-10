@@ -123,9 +123,20 @@
       var currentPath = window.location;
       var currentQuery = getUrlVars();
       
+      //set correct audio switch state on page load
       if (currentQuery['playAudio'] == 'yes') {
         $('#audioswitch').prop('checked', true);
-      } 
+        $('.menu--account li a').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href.split('?')[0]);
+          });
+      }
+      else {
+        $('.menu--account li a').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href + '?playAudio=yes');
+          }); 
+      }
 
       function getUrlVars() {
         var vars = [], hash;
