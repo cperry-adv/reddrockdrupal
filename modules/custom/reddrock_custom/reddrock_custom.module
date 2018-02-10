@@ -34,7 +34,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 		else {
 			// enable toggle of tabs based on taxonomy term field value
 			$term = taxonomy_term_load($tid);
-			$pop_array[$i]['#delta'] = $term->get('weight')->value;
+			$pop_array[$i]['delta'] = $term->get('weight')->value;
 			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
 	  	    
 		}
