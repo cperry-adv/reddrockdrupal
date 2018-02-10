@@ -55,7 +55,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	 */
 		$form['links'] = [
 			'#theme' => 'item_list',
-		  '#items' => '<div class="tracksbuttons"' . $pop_array1 . '</div><div class="soundsbuttons">' . $pop_array2 . '</div>',
+		  '#items' => $pop_array1,
 		  '#attributes' => array('class' => array('pop-list')),
 		]; 
 	}
