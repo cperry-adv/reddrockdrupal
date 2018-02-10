@@ -125,7 +125,7 @@
         
         
           if (audioOn == 1) {
-          logoSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER');
+          logoSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3');
           logoSound.play();
            console.log(logoSound);
         }
