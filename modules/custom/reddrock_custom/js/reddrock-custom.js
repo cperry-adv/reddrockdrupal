@@ -90,7 +90,7 @@ $('.filter-tab a').on('click', function(e) {
         e.preventDefault();
         
         // Get ID of clicked item
-        var id = $(e.target).attr('id');
+        var id = $(e.target).attr('id'); console.log(id+' is the id')
         
         // Set the new value in the SELECT element
         var filter = $('#views-exposed-form-listen-page-block-1 select[name="tid"]');
