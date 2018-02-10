@@ -10,7 +10,7 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
 
-$('.filter-tab a').on('click', function(e) {
+$('.filter-tab a').once().on('click', function(e) {
         e.preventDefault();
         
         // Get ID of clicked item
@@ -28,7 +28,7 @@ $('.filter-tab a').on('click', function(e) {
         filter.trigger('change');
         $('select[name="tid"]').trigger('change');
         $('input.form-submit').trigger('click');
-        console.log(filter.attr('value')+' is select value');
+        
 
       });
 
