@@ -173,7 +173,10 @@ $('.filter-tab a').once().on('click', function(e) {
         }
       }
 
-
+      //play click sound on click of category tabs
+      $('.filter-tab').once().click(function() {
+        clickSound.play();
+      });
       
 
       //play hover sound on mouse over main menu items.
