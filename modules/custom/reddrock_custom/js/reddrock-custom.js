@@ -118,22 +118,23 @@
       
 
       //logo
-      if (audioOn == 1) {
+      
       $('.logo').mouseenter(function() {
         
         
-          
+          if (audioOn == 1) {
           logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
           logoSound.play();
            console.log(logoSound);
-        
+        }
       });
       $('.logo').mouseleave(function() {
-       
+       if (audioOn == 1) {
           logoSound.pause();
+       }
         
       });
-      }
+      
       
       
 
@@ -160,12 +161,6 @@
 
       });
 
-      
-      
-      
-
-      
-      
 
       //play hover sound on mouse over main menu items.
       $('.menu--account > li').mouseenter(function() {
