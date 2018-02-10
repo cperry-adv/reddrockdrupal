@@ -166,7 +166,7 @@
         if (currentQuery['playAudio'] == 'yes') {
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
-            $(this).attr("href", href + '?playAudio=yes');
+            $(this).attr("href", 'cunt');
           });
           updateqs('playAudio','no');
           //update main menu links depending on audio switch state
@@ -175,7 +175,7 @@
         else {
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
-            $(this).attr("href", href);
+            $(this).attr("href", href + '?playAudio=yes');
           }); 
           updateqs('playAudio','yes');
           //update main menu links depending on audio switch state
