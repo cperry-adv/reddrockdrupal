@@ -162,7 +162,7 @@
 
       $('.filter-tab a').once().on('click', function(e) {
         e.preventDefault();
-        clickSound.play();
+        
         alreadySubmitted = 1;
         // Get ID of clicked item
         var id = $(e.target).attr('id'); 
@@ -220,14 +220,6 @@
         }
       });
 
-      //listen page arrival
-
-      if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && initialLoad == true) {
-        if (audioOn == 1) {
-          listenarrivalSound.play(); 
-          
-        }
-      }
 
       //red bar sad sound
       $('.alert-danger').each(function() {
