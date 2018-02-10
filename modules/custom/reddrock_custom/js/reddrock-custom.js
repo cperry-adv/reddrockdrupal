@@ -144,7 +144,7 @@
           history.pushState(null, null, new_url);  
         }
         else {
-          history.pushState(null, null, url[0]);
+          history.pushState(null, null, null);
         }
       }
 
