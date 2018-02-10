@@ -110,7 +110,7 @@ $('.filter-tab a').on('click', function(e) {
     
   
 
-  jQuery(document).ajaxComplete(function(event, xhr, settings) {
+  $(document).ajaxComplete(function(event, xhr, settings) {
   
         var filter_id = $('#views-exposed-form-listen-page-block-1 select[name="tid"]').find(":selected").val();
 
