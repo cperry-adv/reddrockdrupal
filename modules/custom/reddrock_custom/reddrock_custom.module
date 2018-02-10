@@ -56,11 +56,13 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	/**
 	 * Create the item-list the form should render
 	 */
-		array_unshift($pop_array1, 'testing123');
-		array_push($pop_array1, 'testing234');
+		array_unshift($pop_array1, '<div class="track-buttons">');
+		array_push($pop_array1, '</div>');
+		array_unshift($pop_array2, '<div class="sfx-buttons">');
+		array_push($pop_array3, '</div>');
 		$form['links'] = [
 			'#theme' => 'item_list',
-		  '#items' => $pop_array1,
+		  '#items' => $pop_array1 . $pop_array2,
 		  '#attributes' => array('class' => array('pop-list')),
 		]; 
 	}
