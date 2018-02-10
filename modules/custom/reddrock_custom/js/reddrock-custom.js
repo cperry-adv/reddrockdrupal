@@ -85,57 +85,7 @@
       listenarrivalSound.setAttribute('id', 'listenarrivalsound');
       listenarrivalSound.volume = 0.2;
 
-      //listen page arrival
-      if (pathz == '/listen') {
-        if (audioOn == 1) {
-          listenarrivalSound.play();
-        }
-      }
-
-      //red bar sad sound
-      $('.alert-danger').each(function() {
-        if (audioOn == 1) {
-          redbarSound.play();
-        }
-      });
-
-      //green bar happy sound
-      $('.alert-success').each(function() {
-        if (audioOn == 1) {
-          greenbarSound.play();
-        }
-      });
-
-      //contact page arrival
-      if (pathz == '/contact') {
-        if (audioOn == 1) {
-          arrivalSound.play();
-        }
-        //contact keystrokes
-        document.onkeydown = function (e) {
-          if (audioOn == 1) {
-            keystrokeSound.play();
-          }
-        }
-      }
-
-      //page load sound for about page
-      if (pathz == '/about') {
-        if (audioOn == 1) {
-          pageturnSound.play();
-        }
-        //hover for about text
-        $('.content').mouseenter(function() {
-          if (audioOn == 1) {
-            scribbleSound.play();
-          }
-        });
-        $('.content').mouseleave(function() {
-          if (audioOn == 1) {
-            scribbleSound.pause();
-          }
-        });
-      }
+      
 
       //get current audio switch state from path
       var currentPath = window.location;
@@ -264,6 +214,58 @@
           instagramSound.play();
         }
       });
+
+      //listen page arrival
+      if (pathz == '/listen') {
+        if (audioOn == 1) {
+          listenarrivalSound.play();
+        }
+      }
+
+      //red bar sad sound
+      $('.alert-danger').each(function() {
+        if (audioOn == 1) {
+          redbarSound.play();
+        }
+      });
+
+      //green bar happy sound
+      $('.alert-success').each(function() {
+        if (audioOn == 1) {
+          greenbarSound.play();
+        }
+      });
+
+      //contact page arrival
+      if (pathz == '/contact') {
+        if (audioOn == 1) {
+          arrivalSound.play();
+        }
+        //contact keystrokes
+        document.onkeydown = function (e) {
+          if (audioOn == 1) {
+            keystrokeSound.play();
+          }
+        }
+      }
+
+      //page load sound for about page
+      if (pathz == '/about') {
+        if (audioOn == 1) {
+          pageturnSound.play();
+        }
+        //hover for about text
+        $('.content').mouseenter(function() {
+          if (audioOn == 1) {
+            scribbleSound.play();
+          }
+        });
+        $('.content').mouseleave(function() {
+          if (audioOn == 1) {
+            scribbleSound.pause();
+          }
+        });
+      }
     }
   }
 })(jQuery, this, Drupal, drupalSettings);
