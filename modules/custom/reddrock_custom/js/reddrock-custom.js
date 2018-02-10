@@ -10,6 +10,12 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
 
+      //click
+      var clickSound = document.createElement('audio');
+      clickSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
+      clickSound.setAttribute('id', 'clicksound');
+      clickSound.volume = 0.2;
+
 $('.filter-tab a').once().on('click', function(e) {
         e.preventDefault();
         clickSound.play();
@@ -36,11 +42,7 @@ $('.filter-tab a').once().on('click', function(e) {
       var pathz = window.location.pathname;
       var audioOn = 0;
 
-      //click
-      var clickSound = document.createElement('audio');
-      clickSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
-      clickSound.setAttribute('id', 'clicksound');
-      clickSound.volume = 0.2;
+      
       //drone
       var hoverSound = document.createElement('audio');
       hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_07 HEADER - Futuristic_Drone_02.mp3');
