@@ -120,7 +120,7 @@
 
       //logo
       
-      $('.logo').once('mouseenter', function(e) {
+      $('.logo').one('mouseenter', function(e) {
         
         
           if (audioOn == 1) {
