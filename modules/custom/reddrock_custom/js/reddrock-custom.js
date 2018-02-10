@@ -115,16 +115,17 @@
       
 
       //logo
-      
-      $('.logo').mouseenter(function() {
-        //logo sounds
+      //logo sounds
       var logoArray = ['http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
       var logoSound = document.createElement('audio');
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
+      
+      $('.logo').mouseenter(function() {
+        
         
           if (audioOn == 1) {
-          logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
+          logoSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER');
           logoSound.play();
            console.log(logoSound);
         }
