@@ -176,13 +176,13 @@
         
       });
       //logo
-      $('.logo').mouseenter(function() {
+      $('.logo').once().mouseenter(function() {
         logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
         if (audioOn == 1) {
           logoSound.play();
         }
       });
-      $('.logo').mouseleave(function() {
+      $('.logo').once().mouseleave(function() {
         if (audioOn == 1) {
           logoSound.pause();
         }
