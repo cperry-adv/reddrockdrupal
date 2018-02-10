@@ -148,7 +148,13 @@
         }
       }
 
-
+      //update main menu links depending on audio switch state
+      $('.menu--account li a').each(function() {
+        if (currentQuery['playAudio'] == 'yes') {
+          var href = $(this).attr("href");
+          $(this).attr("href", href + '?playAudio=yes');
+        }
+      });
       
 
       //play hover sound on mouse over main menu items.
