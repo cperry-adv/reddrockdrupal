@@ -122,7 +122,10 @@
       //get current audio switch state from path
       var currentPath = window.location;
       var currentQuery = getUrlVars();
-      console.log(currentQuery['poo']);
+      
+      if (currentQuery['playAudio'] == 'yes') {
+        $('#audioswitch').prop('checked', true);
+      } 
 
       function getUrlVars() {
         var vars = [], hash;
@@ -164,22 +167,20 @@
         var currentQuery = getUrlVars();
 
         if (currentQuery['playAudio'] == 'yes') {
+          //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href.split('?')[0]);
           });
           updateqs('playAudio','no');
-          //update main menu links depending on audio switch state
-          
         }
         else {
+          //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
           }); 
           updateqs('playAudio','yes');
-          //update main menu links depending on audio switch state
-
         }
         
       });
