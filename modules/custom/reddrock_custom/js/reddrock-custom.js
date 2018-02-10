@@ -287,17 +287,17 @@
 
       //social media icons
       $('.fblink').click(function() {
-        if (audioOn == 1) {
+        if (audioOn == 1 && pathz != '/listen-tracks') {
           facebookSound.play();
         }
       });
       $('.twlink').click(function() {
-        if (audioOn == 1) {
+        if (audioOn == 1 && pathz != '/listen-tracks') {
           twitterSound.play();
         }
       });
       $('.iglink').click(function() {
-        if (audioOn == 1) {
+        if (audioOn == 1 && pathz != '/listen-tracks') {
           instagramSound.play();
         }
       });
