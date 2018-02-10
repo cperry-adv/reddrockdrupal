@@ -10,7 +10,7 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       //set up some variables we need
-      var currentPath = window.location; console.log(currentPath);
+      
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
@@ -309,6 +309,7 @@
 
   //set correct audio switch state in query string
   function updateqs(param,value) {
+    var currentPath = window.location; 
     var url = currentPath;
     if (value == 'yes') {
       var new_url = url + '?' + param + '=' + value;
