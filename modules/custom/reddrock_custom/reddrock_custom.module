@@ -56,6 +56,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	/**
 	 * Create the item-list the form should render
 	 */
+		array_unshift($pop_array1, 'testing123');
 		$form['links'] = [
 			'#theme' => 'item_list',
 		  '#items' => $pop_array1,
