@@ -203,22 +203,7 @@
           mainthemeSound.pause();
         }
       });
-      //social media icons
-      $('.fblink').click(function() {
-        if (audioOn == 1) {
-          facebookSound.play();
-        }
-      });
-      $('.twlink').click(function() {
-        if (audioOn == 1) {
-          twitterSound.play();
-        }
-      });
-      $('.iglink').click(function() {
-        if (audioOn == 1) {
-          instagramSound.play();
-        }
-      });
+      
 
 
       //red bar sad sound
@@ -297,6 +282,23 @@
           });
           updateqs('playAudio','yes');
           audioOn = 1;
+        }
+      });
+
+      //social media icons
+      $('.fblink').click(function() {
+        if (audioOn == 1) {
+          facebookSound.play();
+        }
+      });
+      $('.twlink').click(function() {
+        if (audioOn == 1) {
+          twitterSound.play();
+        }
+      });
+      $('.iglink').click(function() {
+        if (audioOn == 1) {
+          instagramSound.play();
         }
       });
       
