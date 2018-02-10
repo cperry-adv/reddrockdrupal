@@ -140,6 +140,7 @@
           }); 
       }
 
+      //get the current query string values
       function getUrlVars() {
         var vars = [], hash;
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -217,7 +218,9 @@
         facebookSound.play();
       });
       $('.twlink').click(function() {
-        twitterSound.play();
+        if (currentQuery['playAudio'] == 'yes') {
+          twitterSound.play();
+        }
       });
       $('.iglink').click(function() {
         instagramSound.play();
