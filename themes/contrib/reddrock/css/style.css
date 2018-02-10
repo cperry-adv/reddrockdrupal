@@ -227,14 +227,18 @@ input:checked + .slider:before {
   background-color: #fff;
   height: 40px;
   padding: 10px 16px 9px;
-  color: #532746;
+  color: #333;
   line-height: 23px;
   text-decoration: none;
-  border: 1px solid #532746;
+  border: 1px solid #333;
   cursor: pointer;
+  font-size: 28px;
+  display: block;
+  width: 200px;
+  height: 100px;
 }
 .pop-list li a.active {
-	background-color: #532746;
+	background-color: #efefef;
   color: #fff;
 }
 .view-filter-articles .views-row{
