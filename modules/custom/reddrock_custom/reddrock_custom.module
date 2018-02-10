@@ -35,7 +35,16 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 		else {
 			// enable toggle of tabs based on taxonomy term field value
 			$term = taxonomy_term_load($tid);
-			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
+			$weight = $term->get('weight')->value;
+			$parent = \Drupal::service('entity_type.manager')->getStorage("taxonomy_term")->loadAllParents($tid);
+			if ($parent == '11') {
+				$pop_array1[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
+			}
+			else if ($parent == '12') {
+				$pop_array2[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
+			}
+
+			
 	  	    
 		}
 		$i++; // Increase counter/index
@@ -45,7 +54,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	 */
 		$form['links'] = [
 			'#theme' => 'item_list',
-		  '#items' => $pop_array,
+		  '#items' => '<div class="tracksbuttons"' . $pop_array1 . '</div><div class="soundsbuttons">' . $pop_array2 . '</div>',
 		  '#attributes' => array('class' => array('pop-list')),
 		]; 
 	}
