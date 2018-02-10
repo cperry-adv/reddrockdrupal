@@ -101,7 +101,7 @@ $('.filter-tab a').on('click', function(e) {
         $(e.target).addClass('active');
 
         // Do it! Trigger the select box
-        //filter.trigger('change');
+        filter.trigger('change');
         $('#views-exposed-form-listen-page-block-1 select[name="tid"]').trigger('change');
         $('#views-exposed-form-listen-page-block-1 input.form-submit').trigger('click');
 
