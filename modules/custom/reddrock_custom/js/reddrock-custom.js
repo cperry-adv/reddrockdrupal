@@ -115,39 +115,7 @@
           });
       }
 
-      //audio switch functionality - THIS WORKS
-      $('.slider').once().click(function() {
-        //play clicksound on click
-        clickSound.play();
-        var currentQuery = getUrlVars();
-
-        if (currentQuery['playAudio'] == 'yes') {
-          //update main menu links depending on audio switch state
-          $('.menu--account li a').each(function() {
-            var href = $(this).attr("href");
-            $(this).attr("href", href.split('?')[0]);
-          });
-          $('a.logo').each(function() {
-            var href = $(this).attr("href");
-            $(this).attr("href", href.split('?')[0]);
-          });
-          updateqs('playAudio','no');
-          audioOn = 0;
-        }
-        else {
-          //update main menu links depending on audio switch state
-          $('.menu--account li a').each(function() {
-            var href = $(this).attr("href");
-            $(this).attr("href", href + '?playAudio=yes');
-          }); 
-          $('a.logo').each(function() {
-            var href = $(this).attr("href");
-            $(this).attr("href", href + '?playAudio=yes');
-          });
-          updateqs('playAudio','yes');
-          audioOn = 1;
-        }
-      });
+      
 
       //logo
       if (audioOn == 1) {
@@ -293,6 +261,40 @@
       }
     }
   }
+
+  //audio switch functionality - THIS WORKS
+      $('.slider').once().click(function() {
+        //play clicksound on click
+        clickSound.play();
+        var currentQuery = getUrlVars();
+
+        if (currentQuery['playAudio'] == 'yes') {
+          //update main menu links depending on audio switch state
+          $('.menu--account li a').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href.split('?')[0]);
+          });
+          $('a.logo').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href.split('?')[0]);
+          });
+          updateqs('playAudio','no');
+          audioOn = 0;
+        }
+        else {
+          //update main menu links depending on audio switch state
+          $('.menu--account li a').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href + '?playAudio=yes');
+          }); 
+          $('a.logo').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href + '?playAudio=yes');
+          });
+          updateqs('playAudio','yes');
+          audioOn = 1;
+        }
+      });
 
   //get the current query string values
       function getUrlVars() {
