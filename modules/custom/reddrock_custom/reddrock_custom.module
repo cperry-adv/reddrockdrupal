@@ -43,15 +43,8 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	/**
 	 * Create the item-list the form should render
 	 */
-	function sortByWeight($a, $b)
-	{
-	    $a = $a['#delta'];
-	    $b = $b['#delta'];
-
-	    if ($a == $b) return 0;
-	    return ($a < $b) ? -1 : 1;
-	}
-	 usort($pop_array, 'sortByWeight');
+	
+	 ksort($pop_array);
 	 print_r($pop_array);
 		$form['links'] = [
 			'#theme' => 'item_list',
