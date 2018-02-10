@@ -120,7 +120,7 @@
       }
 
       var currentQuery = getUrlVars();
-      console.log(currentQuery+'is the current query');
+      console.log(currentQuery['poo']);
 
       function getUrlVars() {
         var vars = [], hash;
