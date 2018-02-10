@@ -219,7 +219,7 @@ $('.filter-tab a').once().on('click', function(e) {
         
         if (audioOn == 1) {
           logoSound.play();
-          logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
+        //  logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
            console.log(logoSound);
         }
       });
