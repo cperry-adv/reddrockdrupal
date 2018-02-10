@@ -106,8 +106,7 @@ $('.filter-tab a').on('click', function(e) {
         $('#views-exposed-form-listen-page-block-1 input.form-submit').trigger('click');
 
       });
-    }
-  };
+    
   
 
   jQuery(document).ajaxComplete(function(event, xhr, settings) {
