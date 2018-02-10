@@ -259,10 +259,8 @@
           }
         });
       }
-    }
-  }
 
-  //audio switch functionality - THIS WORKS
+      //audio switch functionality - THIS WORKS
       $('.slider').once().click(function() {
         //play clicksound on click
         clickSound.play();
@@ -295,6 +293,11 @@
           audioOn = 1;
         }
       });
+
+    }
+  }
+
+      
 
   //get the current query string values
       function getUrlVars() {
