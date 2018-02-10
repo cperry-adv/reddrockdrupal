@@ -1,7 +1,7 @@
 (function ($, window, Drupal, drupalSettings) {
 
   'use strict';
-
+  var initialLoad = true;
   /**
    * Redirect to the selected show's blog listing page.
    *
@@ -205,7 +205,7 @@
 
       //listen page arrival
 
-      if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && alreadySubmitted != 1) {
+      if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && initialLoad == true) {
         if (audioOn == 1) {
           listenarrivalSound.play(); console.log(alreadySubmitted);
         }
@@ -289,7 +289,7 @@
           audioOn = 1;
         }
       });
-
+      var initialLoad = false;
     }
   }
 
