@@ -10,7 +10,7 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       //set up some variables we need
-      //var alreadySubmitted = 0;
+      var alreadySubmitted == 0;
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
@@ -141,7 +141,7 @@
       $('.filter-tab a').once().on('click', function(e) {
         e.preventDefault();
         clickSound.play();
-        
+        alreadySubmitted = 1;
         // Get ID of clicked item
         var id = $(e.target).attr('id'); 
         
@@ -205,7 +205,7 @@
 
       //listen page arrival
 
-      if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && alreadySubmitted == 0) {
+      if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && alreadySubmitted != 1) {
         if (audioOn == 1) {
           listenarrivalSound.play(); console.log(pathz);
         }
