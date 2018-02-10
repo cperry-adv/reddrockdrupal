@@ -166,26 +166,16 @@
           updateqs('playAudio','no');
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
-            if (currentQuery['playAudio'] == 'yes') {
-              var href = $(this).attr("href");
-              $(this).attr("href", href + '?playAudio=yes');
-            }
-            else {
-              $(this).attr("href", href);
-            }
+            var href = $(this).attr("href");
+            $(this).attr("href", href + '?playAudio=yes');
           });
         }
         else {
           updateqs('playAudio','yes');
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
-            if (currentQuery['playAudio'] == 'yes') {
-              var href = $(this).attr("href");
-              $(this).attr("href", href + '?playAudio=yes');
-            }
-            else {
-              $(this).attr("href", href);
-            }
+            var href = $(this).attr("href");
+            $(this).attr("href", href);
           });  
         }
         
