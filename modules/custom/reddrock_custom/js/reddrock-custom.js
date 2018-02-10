@@ -139,7 +139,9 @@
       
       $('#edit-preview').once().on('click', function(e) {
         e.preventDefault();
-        clickSound.play();
+        if (audioOn == 1) {
+          clickSound.play();
+        }
       });
 
       $('.filter-tab a').once().on('click', function(e) {
