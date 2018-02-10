@@ -8,3 +8,7 @@
 function reddrock_custom_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'reddrock_custom/reddrockcustom';
 }
+
+function reddrock_custom_processOutbound($path, &$options = array(), Request $request = NULL, BubbleableMetadata $bubbleable_metadata = NULL) {
+	return $path . "/foo";
+}
