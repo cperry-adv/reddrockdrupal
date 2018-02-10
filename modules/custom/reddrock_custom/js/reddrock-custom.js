@@ -122,7 +122,7 @@
       $('a.logo > img').once().on({
         mouseover: function() {
             event.preventDefault();
-            if (audioOn == 1) {
+            if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
           logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
           logoSound.play();
            console.log(logoSound);
@@ -130,7 +130,7 @@
         },
         mouseout: function() {
             event.preventDefault();
-            if (audioOn == 1) {
+            if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
           logoSound.pause();
        }
         }
@@ -140,13 +140,13 @@
       $('.menu--account > li').once().on({
         mouseover: function() {
           event.preventDefault();
-          if (audioOn == 1) {
+          if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
             hoverSound.play();
           }
         },
         mouseout: function() {
           event.preventDefault();
-          if (audioOn == 1) {
+          if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
             hoverSound.pause();
           }
         }
