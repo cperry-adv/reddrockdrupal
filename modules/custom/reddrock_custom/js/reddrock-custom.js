@@ -10,7 +10,7 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       //set up some variables we need
-      var alreadySubmitted == 0;
+      var alreadySubmitted = 0;
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
