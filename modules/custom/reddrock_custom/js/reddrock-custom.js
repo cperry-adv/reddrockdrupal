@@ -93,8 +93,8 @@ $('.filter-tab a').on('click', function(e) {
         var id = $(e.target).attr('id'); 
         
         // Set the new value in the SELECT element
-        var filter = $('#views-exposed-form-listen-page-block-1 select[name="tid"]');
-        filter.val(id); console.log(filter.val(id));
+        $('#views-exposed-form-listen-page-block-1 select[name="tid"]').val(id);
+        
 
         // Unset and then set the active class
         $('.filter-tab a').removeClass('active');
