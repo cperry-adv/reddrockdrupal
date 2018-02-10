@@ -241,7 +241,7 @@
       });
 
       //listen page arrival
-      if (pathz == '/listen-tracks' || paths == '/listen-sfx') {
+      if (pathz == '/listen-tracks' || pathz == '/listen-sfx') {
         if (audioOn == 1) {
           listenarrivalSound.play(); console.log(pathz);
         }
