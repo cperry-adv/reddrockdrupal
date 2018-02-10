@@ -64,7 +64,7 @@
       scribbleSound.volume = 0.2;
       //contact arrival
       var arrivalSound = document.createElement('audio');
-      arrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Typewriter_Finish_Line.mp3');
+      arrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Typewriter_Finish_Line_wBell.mp3');
       arrivalSound.setAttribute('id', 'arrivalsound');
       arrivalSound.volume = 0.2;
       //contact keystrokes
