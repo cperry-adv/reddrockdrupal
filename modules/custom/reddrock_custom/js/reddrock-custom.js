@@ -1,7 +1,7 @@
 (function ($, window, Drupal, drupalSettings) {
 
   'use strict';
-  var initialLoad = true;
+  
   /**
    * Redirect to the selected show's blog listing page.
    *
@@ -14,6 +14,7 @@
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
+      var initialLoad = true;
 
       //click
       var clickSound = document.createElement('audio');
