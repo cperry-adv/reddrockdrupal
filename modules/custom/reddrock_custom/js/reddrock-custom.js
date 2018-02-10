@@ -9,6 +9,29 @@
    */
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
+
+$('.filter-tab a').on('click', function(e) {
+        e.preventDefault();
+        
+        // Get ID of clicked item
+        var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
+        
+        // Set the new value in the SELECT element
+        var filter = $('select[name="tid"]'); 
+        filter.val('7');
+
+        // Unset and then set the active class
+        $('.filter-tab a').removeClass('active');
+        $(e.target).addClass('active');
+
+        // Do it! Trigger the select box
+        filter.trigger('change');
+        $('select[name="tid"]').trigger('change');
+        $('input.form-submit').trigger('click');
+        console.log(filter.attr('value')+' is select value');
+
+      });
+      
       var pathz = window.location.pathname;
       var audioOn = 0;
 
@@ -86,39 +109,11 @@
       listenarrivalSound.volume = 0.2;
 
 
-$('.filter-tab a').on('click', function(e) {
-        e.preventDefault();
-        
-        // Get ID of clicked item
-        var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
-        
-        // Set the new value in the SELECT element
-        var filter = $('select[name="tid"]'); 
-        filter.val('7');
 
-        // Unset and then set the active class
-        $('.filter-tab a').removeClass('active');
-        $(e.target).addClass('active');
-
-        // Do it! Trigger the select box
-        filter.trigger('change');
-        $('select[name="tid"]').trigger('change');
-        $('input.form-submit').trigger('click');
-        console.log(filter.attr('value')+' is select value');
-
-      });
     
   
 
-  $(document).ajaxComplete(function(event, xhr, settings) {
   
-        var filter_id = $('#views-exposed-form-listen-page-block-1 select[name="tid"]').find(":selected").val();
-
-        $('.filter-tab a').removeClass('active');
-        $('.filter-tab').find('#' + filter_id).addClass('active');
-
-        
-  });
       
 
       //get current audio switch state from path
@@ -321,5 +316,15 @@ $('.filter-tab a').on('click', function(e) {
       }
     }
   }
+
+  $(document).ajaxComplete(function(event, xhr, settings) {
+  
+        var filter_id = $('#views-exposed-form-listen-page-block-1 select[name="tid"]').find(":selected").val();
+
+        $('.filter-tab a').removeClass('active');
+        $('.filter-tab').find('#' + filter_id).addClass('active');
+
+        
+  });
 })(jQuery, this, Drupal, drupalSettings);
 
