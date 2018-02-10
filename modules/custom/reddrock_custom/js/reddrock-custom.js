@@ -207,7 +207,7 @@
 
       if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && alreadySubmitted != 1) {
         if (audioOn == 1) {
-          listenarrivalSound.play(); console.log(pathz);
+          listenarrivalSound.play(); console.log(alreadySubmitted);
         }
       }
 
