@@ -27,10 +27,11 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
    * Iterate over the options ($links) to build an array ($pop_array) of links
    */
   $i = 0; // Initiate counter/index
-  $pop_array = array();
+  $pop_array1 = array();
+  $pop_array2 = array();
 	foreach ($links as $tid => $term_name) {
 		if ($tid == 'All') {
-			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" class="active" id="' .$tid . '">' . 'See All</a></span>';
+			$pop_array1[$i]['#markup'] = '<span class="filter-tab"><a href="" class="active" id="' .$tid . '">' . 'See All</a></span>';
 		}
 		else {
 			// enable toggle of tabs based on taxonomy term field value
