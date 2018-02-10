@@ -40,11 +40,11 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 			$parental = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
 			$parent_term = reset($parental);
 			
-			if ($parent_term == 11) {
+			if ($parent_term->id() == 11) {
 				$pop_array1[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
 			}
 		
-			else if ($parent_term == 12) {
+			else if ($parent_term->id() == 12) {
 				$pop_array2[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
 			}
 
