@@ -207,7 +207,8 @@
 
       if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && initialLoad == true) {
         if (audioOn == 1) {
-          listenarrivalSound.play(); console.log(alreadySubmitted);
+          listenarrivalSound.play(); 
+          initialLoad = false;
         }
       }
 
@@ -289,7 +290,7 @@
           audioOn = 1;
         }
       });
-      var initialLoad = false;
+      
     }
   }
 
