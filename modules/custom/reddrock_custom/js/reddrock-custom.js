@@ -25,9 +25,9 @@ $('.filter-tab a').once().on('click', function(e) {
         $(e.target).addClass('active');
 
         // Do it! Trigger the select box
-        filter.trigger('change');
+        //filter.trigger('change');
         $('select[name="tid"]').trigger('change');
-        $('input.form-submit').trigger('click');
+        $('.form-submit').trigger('click');
         
 
       });
