@@ -214,7 +214,7 @@
       if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && initialLoad == true) {
         if (audioOn == 1) {
           listenarrivalSound.play(); 
-          initialLoad = false;
+          
         }
       }
 
@@ -329,7 +329,7 @@
 
   //update on ajax refresh
   $(document).ajaxComplete(function(event, xhr, settings) {
-        var alreadySubmitted = 1;
+        initialLoad = false;
         var filter_id = $('.views-exposed-form select[name="tid"]').find(":selected").val();
 
         $('.filter-tab a').removeClass('active');
