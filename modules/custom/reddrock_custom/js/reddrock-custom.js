@@ -115,7 +115,7 @@
           }); 
         $('a.logo').each(function() {
             var href = $(this).attr("href");
-            $(this).attr("href", href.split('?')[0]));
+            $(this).attr("href", href.split('?')[0]);
           });
       }
 
