@@ -10,7 +10,7 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       //set up some variables we need
-      var currentPath = window.location;
+      var currentPath = window.location; console.log(currentPath);
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
