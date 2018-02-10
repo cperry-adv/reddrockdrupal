@@ -4,3 +4,5 @@ reddrockcustom:
     js/reddrock-custom.js: {}
   dependencies:
     - core/jquery
+    - core/drupalSettings
+    - core/jquery.once
