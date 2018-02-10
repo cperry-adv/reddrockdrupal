@@ -16,11 +16,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
    * the form #id can be found through inspecting the markup
    */
   if($form['#id'] == 'views-exposed-form-listen-page-block-1') { 
-  /**
-   * Include a js and css, which was defined in popolo_custom.libraries.yml
-   */
-  $form['#attached']['library'][] = 'reddrock_custom/reddrock_custom.enable';	
-  $form['#attached']['library'][] = 'reddrock_custom/reddrock_custom.forms';
+
 	/**
 	 * Extract the options from the Views Exposed Filter <select>-list 
 	 */
