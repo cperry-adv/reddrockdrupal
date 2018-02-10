@@ -152,14 +152,6 @@
         }
       });
 
-
-
-     
-
-
-
-
-      
       //add click sound on preview button click
       $('#edit-preview').once().on('click', function(e) {
         e.preventDefault();
@@ -241,9 +233,9 @@
 
       //green bar happy sound
       $('.alert-success').each(function() {
-        if (audioOn == 1) {
+        
           greenbarSound.play();
-        }
+        
       });
 
       //contact page arrival
