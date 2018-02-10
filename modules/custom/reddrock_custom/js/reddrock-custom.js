@@ -264,7 +264,7 @@ $('.filter-tab a').once().on('click', function(e) {
       });
 
       //listen page arrival
-      if (pathz == '/listen') {
+      if (pathz == '/listen-tracks' || '/listen-sfx') {
         if (audioOn == 1) {
           listenarrivalSound.play();
         }
