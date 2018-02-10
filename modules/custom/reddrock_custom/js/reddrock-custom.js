@@ -215,10 +215,10 @@ $('.filter-tab a').once().on('click', function(e) {
         
       });
       //logo
-      $('.logo').once().mouseenter(function() {
+      $('.logo').mouseenter(function() {
         
         if (audioOn == 1) {
-          logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
+          logoSound.once().setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
           logoSound.play(); console.log(logoSound);
         }
       });
