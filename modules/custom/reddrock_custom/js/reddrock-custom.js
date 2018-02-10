@@ -154,7 +154,7 @@
         hoverSound.pause();
       });
       //play click sound on click, also set the correct audio switch value
-      $('.slider').click(function() {
+      $('.slider').once().click(function() {
         clickSound.play();
         updateqs('playAudio','yes');
       });
