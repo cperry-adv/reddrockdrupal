@@ -100,7 +100,7 @@
             $(this).attr("href", href + '?playAudio=yes');
             
           });
-        $('a.logo').each(function() {
+        $('a.logo').once().each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
           });
@@ -113,7 +113,7 @@
             $(this).attr("href", href + '?playAudio=yes');
             $(this).attr("href", href.split('?')[0]);
           }); 
-        $('a.logo').each(function() {
+        $('a.logo')once().each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href.split('?')[0]);
           });
