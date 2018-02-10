@@ -21,7 +21,7 @@ function reddrock_custom_link_alter(&$variables) {
    */
   $url = $variables['url'];
 
-  dpm($url);
+  print_r($url);
 
   if ($url->isRouted() && $url->getRouteName() == 'user.page') {
     $route_name = $url->getRouteName();
