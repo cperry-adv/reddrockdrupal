@@ -24,7 +24,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	/**
 	 * Extract the options from the Views Exposed Filter <select>-list 
 	 */
-  $links = $form['tid']['#options']; 
+  $links = $form['tid']['#options']; print_r($links);
   // remove 'In The Spotlight' from tabs list
   if (($key = array_search('In The Spotlight', $links)) !== false) {
     unset($links[$key]);
