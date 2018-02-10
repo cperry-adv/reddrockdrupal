@@ -118,7 +118,17 @@
           scribbleSound.pause();
         });
       }
-     
+
+      addQueryString = function(url, queryString) {   
+      if (queryString) {
+        var isQuestionMarkPresent = url && url.indexOf('?') !== -1,
+          separator = isQuestionMarkPresent ? '&' : '?';
+        url += separator + queryString;
+      }
+      console.log(url+'is the URL');
+      return url;
+      };
+      addQueryString(window.location, 'goops');
 
       //play hover sound on mouse over main menu items.
       $('.menu--account > li').mouseenter(function() {
