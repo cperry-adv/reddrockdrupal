@@ -192,7 +192,7 @@
         
       });
       //logo
-      $('.logo').once().mouseenter(function() {
+      $('.logo').mouseenter(function() {
         logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
         if (audioOn == 1) {
           logoSound.play();
