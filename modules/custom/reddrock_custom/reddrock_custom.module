@@ -38,7 +38,8 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 			$term = taxonomy_term_load($tid);
 			$weight = $term->get('weight')->value;
 			$parental = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($termId);
-			print_r($parental->id());
+			$parentalid = $parental->id();
+			print_r($parentalid);
 		//	$list = [];
 		//	foreach ($parent as $parentterm) {
 	//		  $list[$parentterm->id()] = $parentterm->label();
