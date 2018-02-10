@@ -254,7 +254,10 @@
       //audio switch functionality - THIS WORKS
       $('.slider').once().click(function() {
         //play clicksound on click
-        clickSound.play();
+        if (pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+          clickSound.play();
+        }
+        
         var currentQuery = getUrlVars();
 
         if (currentQuery['playAudio'] == 'yes') {
