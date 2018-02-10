@@ -10,7 +10,7 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       //set up some variables we need
-      
+      var alreadySubmitted == 0;
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
@@ -204,7 +204,8 @@
       });
 
       //listen page arrival
-      if (pathz == '/listen-tracks' || pathz == '/listen-sfx') {
+
+      if (pathz == '/listen-tracks' || pathz == '/listen-sfx' && alreadySubmitted == 0) {
         if (audioOn == 1) {
           listenarrivalSound.play(); console.log(pathz);
         }
@@ -322,7 +323,7 @@
 
   //update on ajax refresh
   $(document).ajaxComplete(function(event, xhr, settings) {
-  
+        alreadySubmitted = 1;
         var filter_id = $('.views-exposed-form select[name="tid"]').find(":selected").val();
 
         $('.filter-tab a').removeClass('active');
