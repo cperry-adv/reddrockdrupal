@@ -162,6 +162,10 @@
             var href = $(this).attr("href");
             $(this).attr("href", href.split('?')[0]);
           });
+          $('a.logo').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href.split('?')[0]);
+          });
           updateqs('playAudio','no');
         }
         else {
