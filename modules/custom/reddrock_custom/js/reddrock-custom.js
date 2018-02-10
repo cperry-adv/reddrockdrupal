@@ -12,6 +12,7 @@
 
 $('.filter-tab a').once().on('click', function(e) {
         e.preventDefault();
+        clickSound.play();
         
         // Get ID of clicked item
         var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
@@ -172,11 +173,6 @@ $('.filter-tab a').once().on('click', function(e) {
           history.replaceState(null, null, window.location.href.split('?')[0]);
         }
       }
-
-      //play click sound on click of category tabs
-      $('.filter-tab').once().click(function() {
-        clickSound.play();
-      });
       
 
       //play hover sound on mouse over main menu items.
