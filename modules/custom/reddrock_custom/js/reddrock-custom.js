@@ -139,7 +139,7 @@
       //set correct audio switch state in query string
       function updateqs(param,value) {
         var url = currentPath;
-        if (value == 'no') {
+        if (value == 'yes') {
           var new_url = url + '?' + param + '=' + value;
           history.pushState(null, null, new_url);  
         }
