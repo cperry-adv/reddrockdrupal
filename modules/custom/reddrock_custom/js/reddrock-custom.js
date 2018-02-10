@@ -86,34 +86,7 @@
       listenarrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LISTEN - Dreamy_Entrance.mp3');
       listenarrivalSound.setAttribute('id', 'listenarrivalsound');
       listenarrivalSound.volume = 0.2;
-      
-      
 
-$('.filter-tab a').once().on('click', function(e) {
-        e.preventDefault();
-        clickSound.play();
-        
-        // Get ID of clicked item
-        var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
-        
-        // Set the new value in the SELECT element
-        var filter = $('select[name="tid"]');  console.log(filter.attr('id')+' is the select element id');
-        filter.val(id); console.log(filter.val()+' is the filter value');
-
-        // Unset and then set the active class
-        $('.filter-tab a').removeClass('active');
-        $(e.target).addClass('active');
-
-        // Do it! Trigger the select box
-        //filter.trigger('change');
-        $('select[name="tid"]').trigger('change');
-        $('.form-submit').trigger('click');
-        
-
-      });
-
-      
-      
       //set correct audio switch state on page load
       if (currentQuery['playAudio'] == 'yes') {
         $('#audioswitch').prop('checked', true);
@@ -142,50 +115,13 @@ $('.filter-tab a').once().on('click', function(e) {
           });
       }
 
-      //get the current query string values
-      function getUrlVars() {
-        var vars = [], hash;
-        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-        for(var i = 0; i < hashes.length; i++)
-        {
-            hash = hashes[i].split('=');
-            vars.push(hash[0]);
-            vars[hash[0]] = hash[1];
-        }
-        return vars;
-      }
-
-      //set correct audio switch state in query string
-      function updateqs(param,value) {
-        var url = currentPath;
-        if (value == 'yes') {
-          var new_url = url + '?' + param + '=' + value;
-          history.pushState(null, null, new_url);  
-        }
-        else {
-          history.replaceState(null, null, window.location.href.split('?')[0]);
-        }
-      }
-      
-
-      //play hover sound on mouse over main menu items.
-      $('.menu--account > li').mouseenter(function() {
-        if (audioOn == 1) {
-          hoverSound.play();
-        }
-      });
-      $('.menu--account > li').mouseleave(function() {
-        if (audioOn == 1) {
-          hoverSound.pause();
-        }
-      });
-      //play click sound on click, also set the correct audio switch value
+      //audio switch functionality
       $('.slider').once().click(function() {
+        //play clicksound on click
         clickSound.play();
         var currentQuery = getUrlVars();
 
         if (currentQuery['playAudio'] == 'yes') {
-          
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
@@ -199,7 +135,6 @@ $('.filter-tab a').once().on('click', function(e) {
           audioOn = 0;
         }
         else {
-          
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
@@ -212,22 +147,71 @@ $('.filter-tab a').once().on('click', function(e) {
           updateqs('playAudio','yes');
           audioOn = 1;
         }
-        
       });
+
       //logo
+      if (audioOn == 1) {
       $('.logo').mouseenter(function() {
         
-        if (audioOn == 1) {
+        
+          
+          logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
           logoSound.play();
-        //  logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
            console.log(logoSound);
-        }
+        
       });
       $('.logo').mouseleave(function() {
-        if (audioOn == 1) {
+       
           logoSound.pause();
+        
+      });
+      }
+      
+      
+
+      $('.filter-tab a').once().on('click', function(e) {
+        e.preventDefault();
+        clickSound.play();
+        
+        // Get ID of clicked item
+        var id = $(e.target).attr('id'); 
+        
+        // Set the new value in the SELECT element
+        var filter = $('select[name="tid"]');  
+        filter.val(id); 
+
+        // Unset and then set the active class
+        $('.filter-tab a').removeClass('active');
+        $(e.target).addClass('active');
+
+        // Do it! Trigger the select box
+        //filter.trigger('change');
+        $('select[name="tid"]').trigger('change');
+        $('.form-submit').trigger('click');
+        
+
+      });
+
+      
+      
+      
+
+      
+      
+
+      //play hover sound on mouse over main menu items.
+      $('.menu--account > li').mouseenter(function() {
+        if (audioOn == 1) {
+          hoverSound.play();
         }
       });
+      $('.menu--account > li').mouseleave(function() {
+        if (audioOn == 1) {
+          hoverSound.pause();
+        }
+      });
+      
+      
       //music - the way you see it
       $('.maintheme').mouseenter(function() {
         if (audioOn == 1) {
@@ -310,6 +294,32 @@ $('.filter-tab a').once().on('click', function(e) {
     }
   }
 
+  //get the current query string values
+      function getUrlVars() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+      }
+
+  //set correct audio switch state in query string
+  function updateqs(param,value) {
+    var url = currentPath;
+    if (value == 'yes') {
+      var new_url = url + '?' + param + '=' + value;
+      history.pushState(null, null, new_url);  
+    }
+    else {
+      history.replaceState(null, null, window.location.href.split('?')[0]);
+    }
+  }
+
+  //update on ajax refresh
   $(document).ajaxComplete(function(event, xhr, settings) {
   
         var filter_id = $('.views-exposed-form select[name="tid"]').find(":selected").val();
