@@ -9,40 +9,17 @@
    */
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
+      //set up some variables we need
+      var currentPath = window.location;
+      var currentQuery = getUrlVars();
+      var pathz = window.location.pathname;
+      var audioOn = 0;
 
       //click
       var clickSound = document.createElement('audio');
       clickSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
       clickSound.setAttribute('id', 'clicksound');
       clickSound.volume = 0.2;
-
-$('.filter-tab a').once().on('click', function(e) {
-        e.preventDefault();
-        clickSound.play();
-        
-        // Get ID of clicked item
-        var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
-        
-        // Set the new value in the SELECT element
-        var filter = $('select[name="tid"]');  console.log(filter.attr('id')+' is the select element id');
-        filter.val(id); console.log(filter.val()+' is the filter value');
-
-        // Unset and then set the active class
-        $('.filter-tab a').removeClass('active');
-        $(e.target).addClass('active');
-
-        // Do it! Trigger the select box
-        //filter.trigger('change');
-        $('select[name="tid"]').trigger('change');
-        $('.form-submit').trigger('click');
-        
-
-      });
-
-      var pathz = window.location.pathname;
-      var audioOn = 0;
-
-      
       //drone
       var hoverSound = document.createElement('audio');
       hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_07 HEADER - Futuristic_Drone_02.mp3');
@@ -52,7 +29,6 @@ $('.filter-tab a').once().on('click', function(e) {
       //logo sounds
       var logoArray = ['http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
       var logoSound = document.createElement('audio');
-      logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
       //music - the way you see it sounds
@@ -110,18 +86,33 @@ $('.filter-tab a').once().on('click', function(e) {
       listenarrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LISTEN - Dreamy_Entrance.mp3');
       listenarrivalSound.setAttribute('id', 'listenarrivalsound');
       listenarrivalSound.volume = 0.2;
-
-
-
-    
-  
-
-  
+      
       
 
-      //get current audio switch state from path
-      var currentPath = window.location;
-      var currentQuery = getUrlVars();
+$('.filter-tab a').once().on('click', function(e) {
+        e.preventDefault();
+        clickSound.play();
+        
+        // Get ID of clicked item
+        var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
+        
+        // Set the new value in the SELECT element
+        var filter = $('select[name="tid"]');  console.log(filter.attr('id')+' is the select element id');
+        filter.val(id); console.log(filter.val()+' is the filter value');
+
+        // Unset and then set the active class
+        $('.filter-tab a').removeClass('active');
+        $(e.target).addClass('active');
+
+        // Do it! Trigger the select box
+        //filter.trigger('change');
+        $('select[name="tid"]').trigger('change');
+        $('.form-submit').trigger('click');
+        
+
+      });
+
+      
       
       //set correct audio switch state on page load
       if (currentQuery['playAudio'] == 'yes') {
