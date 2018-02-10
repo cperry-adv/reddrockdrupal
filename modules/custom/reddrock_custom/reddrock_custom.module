@@ -20,7 +20,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	/**
 	 * Extract the options from the Views Exposed Filter <select>-list 
 	 */
-  $links = $form['tid']['#options'];
+  $links = $form['tid']['#options']; print_r($links);
 
   /**
    * Iterate over the options ($links) to build an array ($pop_array) of links
@@ -28,13 +28,12 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
   $i = 0; // Initiate counter/index
   $pop_array = array();
 	foreach ($links as $tid => $term_name) {
-		if ($tid == 'All') { 
+		if ($tid == 'All') {
 			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" class="active" id="' .$tid . '">' . 'See All</a></span>';
 		}
 		else {
 			// enable toggle of tabs based on taxonomy term field value
 			$term = taxonomy_term_load($tid);
-			$pop_array[$i]['#delta'] = $term->get('weight')->value;
 			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
 	  	    
 		}
@@ -43,7 +42,6 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	/**
 	 * Create the item-list the form should render
 	 */
-	 print_r($pop_array);
 		$form['links'] = [
 			'#theme' => 'item_list',
 		  '#items' => $pop_array,
