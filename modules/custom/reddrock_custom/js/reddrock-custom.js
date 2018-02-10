@@ -162,21 +162,24 @@
       $('.slider').once().click(function() {
         clickSound.play();
         var currentQuery = getUrlVars();
+
         if (currentQuery['playAudio'] == 'yes') {
-          updateqs('playAudio','no');
-          //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
           });
+          updateqs('playAudio','no');
+          //update main menu links depending on audio switch state
+          
         }
         else {
-          updateqs('playAudio','yes');
-          //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href);
-          });  
+          }); 
+          updateqs('playAudio','yes');
+          //update main menu links depending on audio switch state
+
         }
         
       });
