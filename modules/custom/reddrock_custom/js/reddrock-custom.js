@@ -87,37 +87,53 @@
 
       //listen page arrival
       if (pathz == '/listen') {
-        listenarrivalSound.play();
+        if (audioOn == 1) {
+          listenarrivalSound.play();
+        }
       }
 
       //red bar sad sound
       $('.alert-danger').each(function() {
-        redbarSound.play();
+        if (audioOn == 1) {
+          redbarSound.play();
+        }
       });
 
       //green bar happy sound
       $('.alert-success').each(function() {
-        greenbarSound.play();
+        if (audioOn == 1) {
+          greenbarSound.play();
+        }
       });
 
       //contact page arrival
       if (pathz == '/contact') {
-        arrivalSound.play();
+        if (audioOn == 1) {
+          arrivalSound.play();
+        }
         //contact keystrokes
         document.onkeydown = function (e) {
-          keystrokeSound.play();
+          if (audioOn == 1) {
+            keystrokeSound.play();
+          }
         }
       }
 
       //page load sound for about page
       if (pathz == '/about') {
-        pageturnSound.play();
+        if (audioOn == 1) {
+          pageturnSound.play();
+        }
         //hover for about text
         $('.content').mouseenter(function() {
-          scribbleSound.play();
+          if (audioOn == 1) {
+            scribbleSound.play();
+          }
         });
         $('.content').mouseleave(function() {
-          scribbleSound.pause();
+          if (audioOn == 1) {
+            scribbleSound.pause();
+          }
         });
       }
 
@@ -175,10 +191,14 @@
 
       //play hover sound on mouse over main menu items.
       $('.menu--account > li').mouseenter(function() {
-        hoverSound.play();
+        if (audioOn == 1) {
+          hoverSound.play();
+        }
       });
       $('.menu--account > li').mouseleave(function() {
-        hoverSound.pause();
+        if (audioOn == 1) {
+          hoverSound.pause();
+        }
       });
       //play click sound on click, also set the correct audio switch value
       $('.slider').once().click(function() {
@@ -208,21 +228,31 @@
       //logo
       $('.logo').mouseenter(function() {
         logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
-        logoSound.play();
+        if (audioOn == 1) {
+          logoSound.play();
+        }
       });
       $('.logo').mouseleave(function() {
-        logoSound.pause();
+        if (audioOn == 1) {
+          logoSound.pause();
+        }
       });
       //music - the way you see it
       $('.maintheme').mouseenter(function() {
-        mainthemeSound.play();
+        if (audioOn == 1) {
+          mainthemeSound.play();
+        }
       });
       $('.maintheme').mouseleave(function() {
-        mainthemeSound.pause();
+        if (audioOn == 1) {
+          mainthemeSound.pause();
+        }
       });
       //social media icons
       $('.fblink').click(function() {
-        facebookSound.play();
+        if (audioOn == 1) {
+          facebookSound.play();
+        }
       });
       $('.twlink').click(function() {
         if (audioOn == 1) {
@@ -230,7 +260,9 @@
         }
       });
       $('.iglink').click(function() {
-        instagramSound.play();
+        if (audioOn == 1) {
+          instagramSound.play();
+        }
       });
     }
   }
