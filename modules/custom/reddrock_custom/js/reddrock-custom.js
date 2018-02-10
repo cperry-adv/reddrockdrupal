@@ -10,6 +10,8 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       var pathz = window.location.pathname;
+      var audioOn = 0;
+
       //click
       var clickSound = document.createElement('audio');
       clickSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
@@ -126,6 +128,7 @@
       //set correct audio switch state on page load
       if (currentQuery['playAudio'] == 'yes') {
         $('#audioswitch').prop('checked', true);
+        audioOn = 1;
         $('.menu--account li a').once().each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
@@ -133,6 +136,8 @@
           });
       }
       else {
+        $('#audioswitch').prop('checked', false);
+        audioOn = 0;
         $('.menu--account li a').once().each(function() {
             var href = $(this).attr("href");
             $(this).attr("href", href + '?playAudio=yes');
@@ -181,6 +186,7 @@
         var currentQuery = getUrlVars();
 
         if (currentQuery['playAudio'] == 'yes') {
+          audioOn = 0;
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
@@ -189,6 +195,7 @@
           updateqs('playAudio','no');
         }
         else {
+          audioOn = 1;
           //update main menu links depending on audio switch state
           $('.menu--account li a').each(function() {
             var href = $(this).attr("href");
@@ -218,7 +225,7 @@
         facebookSound.play();
       });
       $('.twlink').click(function() {
-        if (currentQuery['playAudio'] == 'yes') {
+        if (audioOn == 1) {
           twitterSound.play();
         }
       });
