@@ -144,7 +144,7 @@
           history.pushState(null, null, new_url);  
         }
         else {
-          history.replaceState(null, null, boobs);
+          history.replaceState(null, null, 'boobs');
         }
       }
 
