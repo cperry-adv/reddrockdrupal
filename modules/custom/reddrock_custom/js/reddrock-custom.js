@@ -100,6 +100,10 @@
             $(this).attr("href", href + '?playAudio=yes');
             
           });
+        $('a.logo').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href + '?playAudio=yes');
+          });
       }
       else {
         $('#audioswitch').prop('checked', false);
@@ -109,6 +113,10 @@
             $(this).attr("href", href + '?playAudio=yes');
             $(this).attr("href", href.split('?')[0]);
           }); 
+        $('a.logo').each(function() {
+            var href = $(this).attr("href");
+            $(this).attr("href", href.split('?')[0]));
+          });
       }
 
       //get the current query string values
