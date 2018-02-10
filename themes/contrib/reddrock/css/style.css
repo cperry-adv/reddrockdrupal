@@ -197,10 +197,12 @@ input:checked + .slider:before {
 /**
  * Hide <select> and submit-button
  */
-#views-exposed-form-listen-page-block-1 .js-form-type-select {
+#views-exposed-form-listen-page-block-1 .js-form-type-select,
+#views-exposed-form-listen-page-block-2 .js-form-type-select {
 	display: none;
 }
-#views-exposed-form-listen-page-block-1 .form-submit {
+#views-exposed-form-listen-page-block-1 .form-submit,
+#views-exposed-form-listen-page-block-2 .form-submit {
 	display: none;
 }
 
