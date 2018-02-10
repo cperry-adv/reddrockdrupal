@@ -17,7 +17,7 @@ $('.filter-tab a').on('click', function(e) {
         var id = $(e.target).attr('id'); console.log(id+' is the value of the clicked item');
         
         // Set the new value in the SELECT element
-        var filter = $('select[name="tid"]'); 
+        var filter = $('select[name="tid"]');  console.log(filter.attr('id')+' is the select element id');
         filter.val('7');
 
         // Unset and then set the active class
@@ -31,7 +31,7 @@ $('.filter-tab a').on('click', function(e) {
         console.log(filter.attr('value')+' is select value');
 
       });
-      
+
       var pathz = window.location.pathname;
       var audioOn = 0;
 
