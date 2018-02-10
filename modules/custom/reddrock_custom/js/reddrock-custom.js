@@ -87,7 +87,7 @@
       listenarrivalSound.setAttribute('id', 'listenarrivalsound');
       listenarrivalSound.volume = 0.2;
 
-      //set correct audio switch state on page load
+      //set correct audio switch state on page load - THIS WORKS
       if (currentQuery['playAudio'] == 'yes') {
         $('#audioswitch').prop('checked', true);
         audioOn = 1;
@@ -115,7 +115,7 @@
           });
       }
 
-      //audio switch functionality
+      //audio switch functionality - THIS WORKS
       $('.slider').once().click(function() {
         //play clicksound on click
         clickSound.play();
@@ -243,7 +243,7 @@
       //listen page arrival
       if (pathz == '/listen-tracks' || '/listen-sfx') {
         if (audioOn == 1) {
-          listenarrivalSound.play();
+          listenarrivalSound.play(); console.log(pathz);
         }
       }
 
