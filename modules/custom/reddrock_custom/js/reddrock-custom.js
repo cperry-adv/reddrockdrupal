@@ -287,17 +287,17 @@
 
       //social media icons
       $('.fblink').click(function() {
-        if (audioOn == 1 && pathz != '/listen-tracks' || pathz != '/listen-sfx') {
+        if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
           facebookSound.play();
         }
       });
       $('.twlink').click(function() {
-        if (audioOn == 1 && pathz != '/listen-tracks' || pathz != '/listen-sfx') {
+        if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
           twitterSound.play();
         }
       });
       $('.iglink').click(function() {
-        if (audioOn == 1 && pathz != '/listen-tracks' || pathz != '/listen-sfx') {
+        if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
           instagramSound.play();
         }
       });
