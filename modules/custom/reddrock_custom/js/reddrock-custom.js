@@ -27,11 +27,7 @@
       hoverSound.setAttribute('id', 'hoversound');
       hoverSound.loop = true;
       hoverSound.volume = 0.2;
-      //logo sounds
-      var logoArray = ['http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
-      var logoSound = document.createElement('audio');
-      logoSound.setAttribute('id', 'logosound');
-      logoSound.volume = 0.2;
+      
       //music - the way you see it sounds
       var mainthemeSound = document.createElement('audio');
       mainthemeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HOME - Music_The_Way_You_See_It_01.mp3');
@@ -120,8 +116,12 @@
 
       //logo
       
-      $('.logo').one('mouseenter', function(e) {
-        
+      $('.logo').mouseenter(function() {
+        //logo sounds
+      var logoArray = ['http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
+      var logoSound = document.createElement('audio');
+      logoSound.setAttribute('id', 'logosound');
+      logoSound.volume = 0.2;
         
           if (audioOn == 1) {
           logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
