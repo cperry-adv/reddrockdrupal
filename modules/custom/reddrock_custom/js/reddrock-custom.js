@@ -179,6 +179,11 @@
         //filter.trigger('change');
         $('select[name="tid"]').trigger('change');
         $('.form-submit').trigger('click');
+
+        //fix player when changing categories
+        $('.audiofield-wavesurfer.playing').each(function() {
+          $('.audiofield-wavesurfer.playing .playpause').trigger('click');
+        });
         
 
       });
