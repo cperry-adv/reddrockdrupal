@@ -10,7 +10,12 @@ function reddrock_custom_page_attachments(array &$attachments) {
 }
 
 function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
-    
+
+	//contact form
+    if ($form['#id'] == 'contact-message-feedback-form') {
+    	print_r('banana');
+    }
+
   /**
    * Apply the form_alter to a specific form #id
    * the form #id can be found through inspecting the markup
