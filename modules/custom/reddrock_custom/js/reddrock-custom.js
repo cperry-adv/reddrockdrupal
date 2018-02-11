@@ -252,7 +252,7 @@
       }
 
       if (pathz == '/listen-tracks' || pathz == '/listen-sfx') {
-        $('.filter-tab:first').trigger('click');
+        $('.filter-tab:first > a').trigger('click');
       }
 
       //audio switch functionality - THIS WORKS
