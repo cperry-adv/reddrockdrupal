@@ -26,35 +26,25 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
   /**
    * Iterate over the options ($links) to build an array ($pop_array) of links
    */
-  $i = 0; // Initiate counter/index
-  $pop_array1 = array();
-  $pop_array2 = array();
+  //$i = 0; // Initiate counter/index
+  $pop_array = array();
 	foreach ($links as $tid => $term_name) {
+		$term = taxonomy_term_load($tid);
+		$weight = $term->get('weight')->value;
 		if ($tid == 'All') {
-			$pop_array1[$i]['#markup'] = '<span class="filter-tab"><a href="" class="active" id="' .$tid . '">' . 'See All</a></span>';
+			$pop_array[$weight]['#markup'] = '<span class="filter-tab"><a href="" class="active" id="' .$tid . '">' . 'See All</a></span>';
 		}
 		else {
-			// enable toggle of tabs based on taxonomy term field value
-			$term = taxonomy_term_load($tid);
-			$weight = $term->get('weight')->value;
-			$parental = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
-			$parent_term = reset($parental);
-			
-			
-				$pop_array1[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
-			
-
-			
-	  	    
+			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
 		}
-		$i++; // Increase counter/index
+		//$i++; // Increase counter/index
 	} 
 	/**
 	 * Create the item-list the form should render
 	 */
 		$form['links'] = [
 			'#theme' => 'item_list',
-		  '#items' => $pop_array1,
+		  '#items' => $pop_array,
 		  '#attributes' => array('class' => array('pop-list')),
 		]; 
 	}
