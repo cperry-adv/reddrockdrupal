@@ -340,15 +340,7 @@
   }
 
   //update on ajax refresh
-  $(document).ajaxComplete(function(event, xhr, settings) {
-        initialLoad = false;
-        var filter_id = $('.views-exposed-form select[name="tid"]').find(":selected").val();
-
-        $('.filter-tab a').removeClass('active');
-        $('.filter-tab').find('#' + filter_id).addClass('active');
-
-        
-  });
+  
       }
   }
 })(jQuery, this, Drupal, drupalSettings);
