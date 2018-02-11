@@ -251,6 +251,10 @@
         });
       }
 
+      if (pathz == '/listen-tracks' || pathz == '/listen-sfx') {
+        $('.filter-tab:first').trigger('click');
+      }
+
       //audio switch functionality - THIS WORKS
       $('.slider').once().click(function() {
         //play clicksound on click
