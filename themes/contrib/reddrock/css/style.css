@@ -194,8 +194,8 @@ input:checked + .slider:before {
 	}
 }
 
-#views-exposed-form-listen-page-block-1 .view-header,
-#views-exposed-form-listen-page-block-2 .view-header {
+.block-views-blocklisten-page-block-1 .view-header,
+.block-views-blocklisten-page-block-2 .view-header {
 	text-align: center;
 }
 
