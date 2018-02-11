@@ -21,7 +21,8 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	 * Extract the options from the Views Exposed Filter <select>-list 
 	 */
   $links = $form['tid']['#options']; 
-  
+  $form['tid']['#default_value'] = '0';
+  unset($form['tid']['#options']['All']);
 
   /**
    * Iterate over the options ($links) to build an array ($pop_array) of links
