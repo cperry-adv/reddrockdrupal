@@ -39,6 +39,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 		}
 		//$i++; // Increase counter/index
 	} 
+	ksort($pop_array);
 	/**
 	 * Create the item-list the form should render
 	 */
