@@ -18,7 +18,8 @@
       if ((is_chrome)&&(is_safari)) {is_safari=false;}
       if ((is_chrome)&&(is_opera)) {is_chrome=false;}
       if (is_safari) {
-        console.log('you in safari bitch!');
+        var safarimessage = 'poop house';
+        $('.tooltiptext').prepend(safarimessage);
       }
 
       //set up some variables we need
