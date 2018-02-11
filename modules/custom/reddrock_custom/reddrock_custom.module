@@ -15,7 +15,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
    * Apply the form_alter to a specific form #id
    * the form #id can be found through inspecting the markup
    */
-  if( $form['#id'] == 'views-exposed-form-listen-page-block-2') { 
+  if($form['#id'] == 'views-exposed-form-listen-page-block-1' || $form['#id'] == 'views-exposed-form-listen-page-block-2') { 
 
 	/**
 	 * Extract the options from the Views Exposed Filter <select>-list 
