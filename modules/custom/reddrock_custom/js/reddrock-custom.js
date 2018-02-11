@@ -18,8 +18,8 @@
       if ((is_chrome)&&(is_safari)) {is_safari=false;}
       if ((is_chrome)&&(is_opera)) {is_chrome=false;}
       if (is_safari) {
-        var safarimessage = 'poop house';
-        $('.tooltiptext').prepend(safarimessage);
+        var safarimessage = "<div class='safarimessage'>We've noticed you are using Safari.  To experience site audio please open Safari Preferences -> Websites Tab and enable AutoPlay for Reddrockmusic.com</div>";
+        $('.mytooltip').prepend(safarimessage);
       }
 
       //set up some variables we need
