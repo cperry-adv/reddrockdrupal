@@ -194,6 +194,11 @@ input:checked + .slider:before {
 	}
 }
 
+#views-exposed-form-listen-page-block-1 .view-header,
+#views-exposed-form-listen-page-block-2 .view-header {
+	text-align: center;
+}
+
 /**
  * Hide <select> and submit-button
  */
