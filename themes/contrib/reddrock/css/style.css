@@ -172,6 +172,10 @@ input:checked + .slider:before {
     border-color: transparent transparent #ccc transparent;
 }
 
+#edit-field-audio-switch-state-wrapper {
+	display: none;
+}
+
 .mytooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
