@@ -122,7 +122,7 @@
       $('a.logo > img').once().on({
         mouseover: function() {
             event.preventDefault();
-            if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+            if (audioOn == 1 && pathz != '/music' && pathz != '/sounds') {
           logoSound.setAttribute('src', logoArray[Math.floor(Math.random() * logoArray.length)]);
           logoSound.play();
            console.log(logoSound);
@@ -130,7 +130,7 @@
         },
         mouseout: function() {
             event.preventDefault();
-            if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+            if (audioOn == 1 && pathz != '/music' && pathz != '/sounds') {
           logoSound.pause();
        }
         }
@@ -140,13 +140,13 @@
       $('.menu--account > li').once().on({
         mouseover: function() {
           event.preventDefault();
-          if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+          if (audioOn == 1 && pathz != '/music' && pathz != '/sounds') {
             hoverSound.play();
           }
         },
         mouseout: function() {
           event.preventDefault();
-          if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+          if (audioOn == 1 && pathz != '/music' && pathz != '/sounds') {
             hoverSound.pause();
           }
         }
@@ -251,14 +251,14 @@
         });
       }
 
-      if (pathz == '/listen-tracks' || pathz == '/listen-sfx') {
+      if (pathz == '/music' || pathz == '/sounds') {
         $('.filter-tab:first > a').trigger('click');
       }
 
       //audio switch functionality - THIS WORKS
       $('.slider').once().click(function() {
         //play clicksound on click
-        if (pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+        if (pathz != '/music' && pathz != '/sounds') {
           clickSound.play();
         }
         
@@ -294,17 +294,17 @@
 
       //social media icons
       $('.fblink').click(function() {
-        if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+        if (audioOn == 1 && pathz != '/music' && pathz != '/sounds') {
           facebookSound.play();
         }
       });
       $('.twlink').click(function() {
-        if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+        if (audioOn == 1 && pathz != '/music' && pathz != '/sounds') {
           twitterSound.play();
         }
       });
       $('.iglink').click(function() {
-        if (audioOn == 1 && pathz != '/listen-tracks' && pathz != '/listen-sfx') {
+        if (audioOn == 1 && pathz != '/music' && pathz != '/sounds') {
           instagramSound.play();
         }
       });
