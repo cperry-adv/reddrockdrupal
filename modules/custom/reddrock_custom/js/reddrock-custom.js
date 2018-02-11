@@ -10,11 +10,10 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       //set up some variables we need
-      var alreadySubmitted = 0;
+      
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
-      var initialLoad = true;
 
       //click
       var clickSound = document.createElement('audio');
@@ -163,7 +162,7 @@
       $('.filter-tab a').once().on('click', function(e) {
         e.preventDefault();
         
-        alreadySubmitted = 1;
+        
         // Get ID of clicked item
         var id = $(e.target).attr('id'); 
         
@@ -262,7 +261,7 @@
           clickSound.play();
         }
         
-        var currentQuery = getUrlVars();
+       
 
         if (currentQuery['playAudio'] == 'yes') {
           //update main menu links depending on audio switch state
@@ -340,7 +339,15 @@
   }
 
   //update on ajax refresh
-  
+  $(document).ajaxComplete(function(event, xhr, settings) {
+        
+        var filter_id = $('.views-exposed-form select[name="tid"]').find(":selected").val();
+
+        $('.filter-tab a').removeClass('active');
+        $('.filter-tab').find('#' + filter_id).addClass('active');
+
+        
+  });
       }
   }
 })(jQuery, this, Drupal, drupalSettings);
