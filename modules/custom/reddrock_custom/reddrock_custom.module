@@ -21,7 +21,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	 * Extract the options from the Views Exposed Filter <select>-list 
 	 */
   $links = $form['tid']['#options']; 
-  $form['tid']['#default_value'] = '0';
+  $form['tid']['#default_value'] = 0;
   unset($form['tid']['#options']['All']);
 
   /**
