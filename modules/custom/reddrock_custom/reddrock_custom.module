@@ -35,7 +35,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 			$pop_array[$weight]['#markup'] = '<span class="filter-tab"><a href="" class="active" id="' .$tid . '">' . 'See All</a></span>';
 		}
 		else {
-			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
+			$pop_array[$weight]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
 		}
 		//$i++; // Increase counter/index
 	} 
