@@ -22,7 +22,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 		drupal_set_message('we sent a form woohoo');
 		//kint($form);
 		$keys = \Drupal::request()->get('keys');
-		$fullpath = '/home' . $keys;
+		$fullpath = 'http://dev.reddrockmusic.com/home?playAudio=yes';
 		$url = Url::fromUri($fullpath);
 		$form_state->setRedirectUrl($url);
 	}
