@@ -224,14 +224,14 @@
 
 
       //red bar sad sound
-      $('.alert-danger').each(function() {
+      $('.alert-danger').once().each(function() {
         if (audioOn == 1) {
           redbarSound.play();
         }
       });
 
       //green bar happy sound
-      $('.alert-success').each(function() {
+      $('.alert-success').once().each(function() {
         
           greenbarSound.play();
         
