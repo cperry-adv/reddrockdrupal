@@ -306,7 +306,7 @@
             $(this).attr("href", href + '?playAudio=yes');
           });
           updateqs('playAudio','yes');
-          $('#edit-field-audio-switch-state-0-value').val(currentQuery);
+          $('#edit-field-audio-switch-state-0-value').val('playAudio');
           audioOn = 1;
         }
       });
