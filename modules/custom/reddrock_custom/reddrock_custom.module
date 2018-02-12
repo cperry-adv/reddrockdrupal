@@ -18,17 +18,6 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
     	$form['actions']['submit']['#submit'][] = 'reddrock_custom_contact_submit';
     }
 
-	function reddrock_custom_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-		$fullpath = 'http://reddrockmusic.com/home';
-		$audioswitch_val = \Drupal::request()->get('playAudio');
-		if ($audioswitch_val == 'yes') {
-			$fullpath .= '?playAudio=yes';
-		}
-		$audioswitch_fallback = $form_state->getValue('field_audio_switch_state'); kint($audioswitch_fallback);
-		$url = Url::fromUri($fullpath);
-		$form_state->setRedirectUrl($url);
-	}
-
   /**
    * Apply the form_alter to a specific form #id
    * the form #id can be found through inspecting the markup
@@ -71,3 +60,14 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
   	//nothing...
   } 
 }
+
+function reddrock_custom_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+		$fullpath = 'http://reddrockmusic.com/home';
+		$audioswitch_val = \Drupal::request()->get('playAudio');
+		if ($audioswitch_val == 'yes') {
+			$fullpath .= '?playAudio=yes';
+		}
+		$audioswitch_fallback = $form_state->getValue('field_audio_switch_state'); kint($audioswitch_fallback);
+		$url = Url::fromUri($fullpath);
+		$form_state->setRedirectUrl($url);
+	}
