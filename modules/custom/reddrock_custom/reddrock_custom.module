@@ -21,7 +21,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	function reddrock_custom_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
 		
 		
-		$keys = \Drupal::request()->get('keys'); 
+		$keys = \Drupal::request()->get('playAudio'); 
 		$fullpath = 'http://dev.reddrockmusic.com/home' . $keys;
 		$url = Url::fromUri($fullpath);
 		$form_state->setRedirectUrl($url);kint($keys);
