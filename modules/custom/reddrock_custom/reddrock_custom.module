@@ -20,7 +20,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 
 	function reddrock_custom_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
 		$fullpath = 'http://dev.reddrockmusic.com/home';
-		$audioswitch_val = \Drupal::request()->get('playAudio'); kint('PAPPOOSE!!! ' . $audioswitch_val);
+		$audioswitch_val = \Drupal::request()->get('playAudio');
 		if ($audioswitch_val == 'yes') {
 			$fullpath .= '?playAudio=yes';
 		}
