@@ -16,7 +16,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
     	$form['actions']['submit']['#submit'][] = 'reddrock_custom_contact_submit';
     }
 
-	function custom_module_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+	function reddrock_custom_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
 		drupal_set_message('we sent a form woohoo');
 		kint($form_state);
 	//	$url = Url::fromRoute('contact.site_page');
