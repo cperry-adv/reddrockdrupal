@@ -21,7 +21,8 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 	function reddrock_custom_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
 		drupal_set_message('we sent a form woohoo');
 		//kint($form);
-		$url = Url::fromUri('http://dev.reddrockmusic.com/go/here');
+		$path = \Drupal::service('path.current')->getPath();
+		$url = Url::fromUri($path);
 		$form_state->setRedirectUrl($url);
 	}
 
