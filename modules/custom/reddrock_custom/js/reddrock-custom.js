@@ -271,9 +271,7 @@
         });
       }
 
-      if (pathz == '/music' || pathz == '/sounds') {
-        $('.filter-tab:first > a').trigger('click');
-      }
+      
 
       //audio switch functionality - THIS WORKS
       $('.slider').once().click(function() {
