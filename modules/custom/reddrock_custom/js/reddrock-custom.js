@@ -38,73 +38,73 @@
 
       //click
       var clickSound = document.createElement('audio');
-      clickSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
+      clickSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 OVERALL - Main_Click.mp3');
       clickSound.setAttribute('id', 'clicksound');
       clickSound.volume = 0.2;
       //drone
       var hoverSound = document.createElement('audio');
-      hoverSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_07 HEADER - Futuristic_Drone_02.mp3');
+      hoverSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_07 HEADER - Futuristic_Drone_02.mp3');
       hoverSound.setAttribute('id', 'hoversound');
       hoverSound.loop = true;
       hoverSound.volume = 0.2;
       //logo sounds
-      var logoArray = ['http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
+      var logoArray = ['http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Lead_Lick.mp3','http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Heavy_Riff.mp3','http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_04.mp3','http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Drum_Take_06.mp3','http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_01.mp3','http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HEADER - Diamond_Dave_Woo_02.mp3'];
       var logoSound = document.createElement('audio');
       logoSound.setAttribute('id', 'logosound');
       logoSound.volume = 0.2;
       //music - the way you see it sounds
       var mainthemeSound = document.createElement('audio');
-      mainthemeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HOME - Music_The_Way_You_See_It_01.mp3');
+      mainthemeSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 HOME - Music_The_Way_You_See_It_01.mp3');
       mainthemeSound.setAttribute('id', 'mainthemesound');
       mainthemeSound.volume = 0.2;
       //twitter
       var twitterSound = document.createElement('audio');
-      twitterSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Twitter_Tweet.mp3');
+      twitterSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Twitter_Tweet.mp3');
       twitterSound.setAttribute('id', 'twittersound');
       twitterSound.volume = 0.2;
       //facebook
       var facebookSound = document.createElement('audio');
-      facebookSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Facebook_Chatter.mp3');
+      facebookSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Facebook_Chatter.mp3');
       facebookSound.setAttribute('id', 'facebooksound');
       facebookSound.volume = 0.2;
       //instagram
       var instagramSound = document.createElement('audio');
-      instagramSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Instagram_Camera_Shutter.mp3');
+      instagramSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 FOOTER - Instagram_Camera_Shutter.mp3');
       instagramSound.setAttribute('id', 'instagramsound');
       instagramSound.volume = 0.2;
       //pageturn
       var pageturnSound = document.createElement('audio');
-      pageturnSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 ABOUT - Page_Turn.mp3');
+      pageturnSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 ABOUT - Page_Turn.mp3');
       pageturnSound.setAttribute('id', 'pageturnsound');
       pageturnSound.volume = 0.2;
       //scribble
       var scribbleSound = document.createElement('audio');
-      scribbleSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 ABOUT - Scribble.mp3');
+      scribbleSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 ABOUT - Scribble.mp3');
       scribbleSound.setAttribute('id', 'scribblesound');
       scribbleSound.volume = 0.2;
       //contact arrival
       var arrivalSound = document.createElement('audio');
-      arrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Typewriter_Finish_Line_wBell.mp3');
+      arrivalSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Typewriter_Finish_Line_wBell.mp3');
       arrivalSound.setAttribute('id', 'arrivalsound');
       arrivalSound.volume = 0.2;
       //contact keystrokes
       var keystrokeSound = document.createElement('audio');
-      keystrokeSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/keystroke.wav');
+      keystrokeSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/keystroke.wav');
       keystrokeSound.setAttribute('id', 'keystrokesound');
       keystrokeSound.volume = 0.2;
       //green bar
       var greenbarSound = document.createElement('audio');
-      greenbarSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Happy_Celeste.mp3');
+      greenbarSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 CONTACT - Happy_Celeste.mp3');
       greenbarSound.setAttribute('id', 'greenbarsound');
       greenbarSound.volume = 0.2;
       //red bar
       var redbarSound = document.createElement('audio');
-      redbarSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LOGIN - Invalid_Login.mp3');
+      redbarSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LOGIN - Invalid_Login.mp3');
       redbarSound.setAttribute('id', 'redbarsound');
       redbarSound.volume = 0.2;
       //listen page arrival
       var listenarrivalSound = document.createElement('audio');
-      listenarrivalSound.setAttribute('src', 'http://dev.reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LISTEN - Dreamy_Entrance.mp3');
+      listenarrivalSound.setAttribute('src', 'http://reddrockmusic.com/sites/default/files/website_sfx/2018_02_05 LISTEN - Dreamy_Entrance.mp3');
       listenarrivalSound.setAttribute('id', 'listenarrivalsound');
       listenarrivalSound.volume = 0.2;
 
