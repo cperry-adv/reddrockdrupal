@@ -13,8 +13,15 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 
 	//contact form
     if ($form['#id'] == 'contact-message-feedback-form') {
-    	
+    	$form['actions']['submit']['#submit'][] = 'reddrock_custom_contact_submit';
     }
+
+	function custom_module_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+		drupal_set_message('we sent a form woohoo');
+		kint($form_state);
+	//	$url = Url::fromRoute('contact.site_page');
+	//	$form_state->setRedirectUrl($url);
+	}
 
   /**
    * Apply the form_alter to a specific form #id
