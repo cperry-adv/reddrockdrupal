@@ -9,8 +9,6 @@
    */
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
-
-
       //detect safari users
       var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
       var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
@@ -29,9 +27,6 @@
       var currentQuery = getUrlVars();
       var pathz = window.location.pathname;
       var audioOn = 0;
-
-      //save audio switch state in contact form
-      //$('#edit-field-audio-switch-state-0-value').val(currentQuery);
 
       //click
       var clickSound = document.createElement('audio');
