@@ -10,10 +10,8 @@
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
       
-//save audio switch state in contact form
-      $('#edit-field-audio-switch-state-0-value').val(currentQuery);
 
- //detect safari users
+      //detect safari users
       var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
       var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
       var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
@@ -33,6 +31,10 @@
       var pathz = window.location.pathname;
       var audioOn = 0;
       var initialLoad = true;
+
+      //save audio switch state in contact form
+      $('#edit-field-audio-switch-state-0-value').val(currentQuery);
+
 
       //click
       var clickSound = document.createElement('audio');
@@ -225,14 +227,14 @@
 
 
       //red bar sad sound
-      $('.alert-danger').each(function() {
+      $('.alert-danger').once().each(function() {
         if (audioOn == 1) {
           redbarSound.play();
         }
       });
 
       //green bar happy sound
-      $('.alert-success').each(function() {
+      $('.alert-success').once().each(function() {
         
           greenbarSound.play();
         
