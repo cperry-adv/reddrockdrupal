@@ -22,7 +22,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 		
 		
 		$keys = \Drupal::request()->get('keys'); 
-		$fullpath = 'http://dev.reddrockmusic.com/home?playAudio=yes';
+		$fullpath = 'http://dev.reddrockmusic.com/home' . $keys;
 		$url = Url::fromUri($fullpath);
 		$form_state->setRedirectUrl($url);kint($keys);
 	}
