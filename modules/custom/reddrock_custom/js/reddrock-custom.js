@@ -293,6 +293,7 @@
             $(this).attr("href", href.split('?')[0]);
           });
           updateqs('playAudio','no');
+          $('#edit-field-audio-switch-state-0-value').val('');
           audioOn = 0;
         }
         else {
