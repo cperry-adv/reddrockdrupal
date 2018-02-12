@@ -24,6 +24,7 @@ function reddrock_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 		if ($audioswitch_val == 'yes') {
 			$fullpath .= '?playAudio=yes';
 		}
+		$audioswitch_fallback = $form_state->getValue('field_audio_switch_state'); kint($audioswitch_fallback);
 		$url = Url::fromUri($fullpath);
 		$form_state->setRedirectUrl($url);
 	}
