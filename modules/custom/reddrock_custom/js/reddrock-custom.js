@@ -31,7 +31,7 @@
       var audioOn = 0;
 
       //save audio switch state in contact form
-      $('#edit-field-audio-switch-state-0-value').val(currentQuery);
+      //$('#edit-field-audio-switch-state-0-value').val(currentQuery);
 
       //click
       var clickSound = document.createElement('audio');
