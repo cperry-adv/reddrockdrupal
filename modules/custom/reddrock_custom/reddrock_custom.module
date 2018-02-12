@@ -68,7 +68,7 @@ function reddrock_custom_contact_submit(&$form, \Drupal\Core\Form\FormStateInter
 			$fullpath .= '?playAudio=yes';
 		}
 		$audioswitch_fallback = $form_state->getValue('field_audio_switch_state');
-		drupal_set_message(print_r($audioswitch_fallback) . ' is a message for you');
+		drupal_set_message(print_r($audioswitch_fallback, TRUE) . ' is a message for you');
 		$url = Url::fromUri($fullpath);
 		$form_state->setRedirectUrl($url);
 	}
