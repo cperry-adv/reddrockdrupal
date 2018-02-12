@@ -9,6 +9,24 @@
    */
   Drupal.behaviors.reddrockcustom = {
     attach: function(context, settings) {
+      
+//save audio switch state in contact form
+      $('#edit-field-audio-switch-state-0-value').val(currentQuery);
+
+ //detect safari users
+      var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+      var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+      var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+      var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+      var is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+      if ((is_chrome)&&(is_safari)) {is_safari=false;}
+      if ((is_chrome)&&(is_opera)) {is_chrome=false;}
+      if (is_safari) {
+        var safarimessage = "<div class='safarimessage'>We've noticed you are using Safari.  To experience site audio please open Safari Preferences -> Websites Tab and enable AutoPlay for Reddrockmusic.com</div>";
+        $('.tooltiptext').prepend(safarimessage);
+      }
+
+
       //set up some variables we need
       var alreadySubmitted = 0;
       var currentQuery = getUrlVars();
