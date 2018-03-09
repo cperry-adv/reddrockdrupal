@@ -44,5 +44,11 @@
 /update.php
 /web.config
 
+#some other stuff
 
+/RRIM_pass2
+/sitemap.xml
+/composer.json
+/composer.lock
+/vendor
 # End of https://www.gitignore.io/api/drupal8
