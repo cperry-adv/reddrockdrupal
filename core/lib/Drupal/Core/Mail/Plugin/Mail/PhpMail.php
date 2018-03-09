@@ -63,12 +63,7 @@ class PhpMail implements MailInterface {
     }
     $mimeheaders = [];
     foreach ($message['headers'] as $name => $value) {
-      if ($name == 'From') {
-        $mimeheaders[] = $name . ': ' . $value;
-      }
-      else {
-        $mimeheaders[] = $name . ': ' . Unicode::mimeHeaderEncode($value);
-      }
+      $mimeheaders[] = $name . ': ' . Unicode::mimeHeaderEncode($value);
     }
     $line_endings = Settings::get('mail_line_endings', PHP_EOL);
     // Prepare mail commands.
