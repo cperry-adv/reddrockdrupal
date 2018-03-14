@@ -266,6 +266,14 @@ a.homepage-sfx-button {
   padding: 10px;
 }
 
+a.homepage-music-button {
+  margin-right: 50px;
+}
+
+a.homepage-sfx-button {
+  margin-left: 50px;
+}
+
 a.homepage-music-button:hover,
 a.homepage-sfx-button:hover {
   text-decoration: none;
@@ -292,4 +300,6 @@ a.homepage-music-button span.maintheme-subtitle {
 
 a.homepage-sfx-button span.maintheme-subtitle {
   font-size: 35px;
+  line-height: 44px;
+  padding-bottom: 3px;
 }
