@@ -308,6 +308,7 @@ a.homepage-sfx-button span.maintheme-subtitle {
   padding-bottom: 3px;
 }
 
-#contact-message-feedback-form label {
+#contact-message-feedback-form label,
+#contact-message-feedback-form input {
   font-size: 18px;
 }
