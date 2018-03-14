@@ -255,3 +255,17 @@ input:checked + .slider:before {
 	float: left;
 	padding: 15px;
 }
+
+a.homepage-music-button {
+  display: inline-block;
+  font-size: 2em;
+  background: red;
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #fff;
+}
+
+a.homepage-music-button span {
+  text-align: center;
+  display: block;
+}
