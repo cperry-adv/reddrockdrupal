@@ -278,6 +278,7 @@ a.homepage-sfx-button {
 
 a.homepage-music-button:hover,
 a.homepage-sfx-button:hover {
+  transition: background-color 0.5s ease;
   text-decoration: none;
   background: #fff;
   color: #333;
