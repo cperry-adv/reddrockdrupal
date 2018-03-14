@@ -323,3 +323,7 @@ a.homepage-sfx-button span.maintheme-subtitle {
 .views-row .teaser h2 {
   display: none;
 }
+
+input.volume {
+  display: none;
+}
