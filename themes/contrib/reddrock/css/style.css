@@ -256,7 +256,8 @@ input:checked + .slider:before {
 	padding: 15px;
 }
 
-a.homepage-music-button {
+a.homepage-music-button,
+a.homepage-sfx-button {
   display: inline-block;
   font-size: 2em;
   background: red;
@@ -265,7 +266,8 @@ a.homepage-music-button {
   color: #fff;
 }
 
-a.homepage-music-button span {
+a.homepage-music-button span,
+a.homepage-sfx-button span {
   text-align: center;
   display: block;
 }
