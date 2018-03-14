@@ -266,6 +266,12 @@ a.homepage-sfx-button {
   padding: 10px;
 }
 
+a.homepage-music-button:hover,
+a.homepage-sfx-button:hover {
+  text-decoration: none;
+  background: pink;
+}
+
 a.homepage-music-button span,
 a.homepage-sfx-button span {
   text-align: center;
@@ -275,6 +281,7 @@ a.homepage-sfx-button span {
 a.homepage-music-button span.maintheme,
 a.homepage-sfx-button span.maintheme {
   font-size: 105px;
+  line-height: 100px;
 
 }
 
