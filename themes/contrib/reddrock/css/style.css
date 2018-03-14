@@ -279,7 +279,8 @@ a.homepage-sfx-button {
 a.homepage-music-button:hover,
 a.homepage-sfx-button:hover {
   text-decoration: none;
-  background: pink;
+  background: #fff;
+  color: #333;
 }
 
 a.homepage-music-button span,
