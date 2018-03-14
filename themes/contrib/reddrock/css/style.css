@@ -259,8 +259,8 @@ input:checked + .slider:before {
 a.homepage-music-button,
 a.homepage-sfx-button {
   display: inline-block;
-  background: red;
-  border: 2px solid #333;
+  background: #bc4c41;
+  border: 2px solid #e7e7e7;
   border-radius: 5px;
   color: #fff;
   padding: 10px;
