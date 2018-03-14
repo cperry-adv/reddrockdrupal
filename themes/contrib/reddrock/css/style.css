@@ -264,10 +264,21 @@ a.homepage-sfx-button {
   border: 2px solid #333;
   border-radius: 5px;
   color: #fff;
+  padding: 10px;
 }
 
 a.homepage-music-button span,
 a.homepage-sfx-button span {
   text-align: center;
   display: block;
+}
+
+a.homepage-music-button span.maintheme,
+a.homepage-sfx-button span.maintheme {
+  font-size: 69px;
+}
+
+a.homepage-music-button span.maintheme-subtitle,
+a.homepage-sfx-button span.maintheme-subtitle {
+  font-size: 22px;
 }
