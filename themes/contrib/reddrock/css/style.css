@@ -318,3 +318,7 @@ a.homepage-sfx-button span.maintheme-subtitle {
 #edit-preview {
   display: none;
 }
+
+.views-row .teaser h2 {
+  display: none;
+}
