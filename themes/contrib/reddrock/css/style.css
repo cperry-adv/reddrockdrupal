@@ -259,7 +259,6 @@ input:checked + .slider:before {
 a.homepage-music-button,
 a.homepage-sfx-button {
   display: inline-block;
-  font-size: 2em;
   background: red;
   border: 2px solid #333;
   border-radius: 5px;
@@ -275,10 +274,15 @@ a.homepage-sfx-button span {
 
 a.homepage-music-button span.maintheme,
 a.homepage-sfx-button span.maintheme {
-  font-size: 69px;
+  font-size: 105px;
+
 }
 
-a.homepage-music-button span.maintheme-subtitle,
+a.homepage-music-button span.maintheme-subtitle {
+  font-size: 33px;
+}
+
+
 a.homepage-sfx-button span.maintheme-subtitle {
-  font-size: 22px;
+  font-size: 35px;
 }
