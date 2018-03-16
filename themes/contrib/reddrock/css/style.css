@@ -337,6 +337,10 @@ input.volume {
   text-decoration: none;
 }
 
+article.blog-post.teaser {
+  margin-bottom: 40px;
+}
+
 article.blog-post.teaser .blog-left {
   width: 220px;
   display: inline-block;
