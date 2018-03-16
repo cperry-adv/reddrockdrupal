@@ -328,3 +328,6 @@ input.volume {
   display: none;
 }
 
+.views-row .teaser h2.post-title {
+  display: block;
+}
