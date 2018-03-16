@@ -78,14 +78,12 @@
   <div class="content-wrapper">
       {% set createdDate = node.getCreatedTime|date('F j Y') %}
       <div class="sub-title date">{{ createdDate }}</div>
-      /*<h4 class="title-primary-bg">{{ blog_label }}</h4>*/
+     {# /*<h4 class="title-primary-bg">{{ blog_label }}</h4>*/ #}
     <div class="content-inner-wrapper">
       {{ title_prefix }}
-      {% if not page %}
         <h2{{ title_attributes }}{{ title_attributes.addClass('post-tile') }}>
           {{ label }}
         </h2>
-      {% endif %}
       {{ title_suffix }}
       <div{{ content_attributes.addClass('content') }}>
         {{ content.body }}
