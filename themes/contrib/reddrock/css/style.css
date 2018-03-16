@@ -331,3 +331,16 @@ input.volume {
 .views-row .teaser h2.post-title {
   display: block;
 }
+
+article.blog-post.teaser .blog-left {
+  width: 220px;
+  display: inline-block;
+  vertical-align: top;
+} 
+
+article.blog-post.teaser .blog-right {
+  width: 896px;
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+}

@@ -80,8 +80,6 @@
     {{ content.field_blog_post_image }}
     </div>
     <div class="blog-right">
-      {% set createdDate = node.getCreatedTime|date('F j Y') %}
-      <div class="sub-title date">{{ createdDate }}</div>
      {# /*<h4 class="title-primary-bg">{{ blog_label }}</h4>*/ #}
     <div class="content-inner-wrapper">
       {{ title_prefix }}
@@ -89,6 +87,8 @@
           <a href="{{ url }}">{{ label }}</a>
         </h2>
       {{ title_suffix }}
+      {% set createdDate = node.getCreatedTime|date('F j Y') %}
+      <div class="sub-title date">{{ createdDate }}</div>
       <div{{ content_attributes.addClass('content') }}>
         {{ content.body }}
         </div>
