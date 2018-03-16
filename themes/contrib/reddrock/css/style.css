@@ -353,3 +353,39 @@ article.blog-post.teaser .blog-right {
   padding-left: 20px;
   vertical-align: top;
 }
+
+#block-redd,
+#block-jay,
+#block-chris,
+#block-enrique {
+  margin-bottom: 25px;
+}
+
+#block-redd .field--type-image,
+#block-jay .field--type-image,
+#block-chris .field--type-image,
+#block-enrique .field--type-image {
+  float: left;
+}
+
+#block-redd .field--name-field-team-member-name,
+#block-jay .field--name-field-team-member-name,
+#block-chris .field--name-field-team-member-name,
+#block-enrique .field--name-field-team-member-name {
+  float: left;
+  width: 915px;
+  vertical-align: top;
+  padding-left: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#block-redd .field--name-body,
+#block-jay .field--name-body,
+#block-chris .field--name-body,
+#block-enrique .field--name-body {
+  float: left;
+  width: 915px;
+  vertical-align: top;
+  padding-left: 25px;
+}
