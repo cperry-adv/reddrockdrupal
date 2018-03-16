@@ -76,6 +76,10 @@
 <article{{ attributes.addClass(classes) }} xmlns="http://www.w3.org/1999/html">
   {{ content.field_image_hero }}
   <div class="content-wrapper">
+    <div class="blog-left">
+    {{ content.field_blog_post_image }}
+    </div>
+    <div class="blog-right">
       {% set createdDate = node.getCreatedTime|date('F j Y') %}
       <div class="sub-title date">{{ createdDate }}</div>
      {# /*<h4 class="title-primary-bg">{{ blog_label }}</h4>*/ #}
@@ -87,6 +91,7 @@
       {{ title_suffix }}
       <div{{ content_attributes.addClass('content') }}>
         {{ content.body }}
+        </div>
       </div>
     </div>
     
