@@ -312,7 +312,11 @@ a.homepage-sfx-button span.maintheme-subtitle {
 #contact-message-feedback-form label,
 #contact-message-feedback-form input,
 #contact-message-feedback-form textarea,
-#contact-message-feedback-form button {
+#contact-message-feedback-form button,
+#comment-form label,
+#comment-form input,
+#comment-form textarea,
+#comment-form button {
   font-size: 18px;
 }
 
@@ -392,4 +396,8 @@ article.blog-post.teaser .blog-right {
 
 #block-meetthereddrockteam {
   margin: 40px 0;
+}
+
+article.blog-post.full .field--name-body {
+  margin-bottom: 65px;
 }
