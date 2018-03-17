@@ -93,8 +93,8 @@
       $(wavecontainer).find('.playlist .track').on('click', () => {
         // Load the track.
         Drupal.AudiofieldWavesurfer.Load(wavecontainer, wavesurfer, $(event.currentTarget));
-        // Play the track.
-        Drupal.AudiofieldWavesurfer.PlayPause(wavecontainer, wavesurfer);
+      //  // Play the track.
+      //  Drupal.AudiofieldWavesurfer.PlayPause(wavecontainer, wavesurfer);
       });
 
       // Handle volume change.
@@ -147,11 +147,13 @@
    */
   Drupal.AudiofieldWavesurfer.Load = (wavecontainer, wavesurfer, track) => {
     // Load the track.
+    wavesurfer.load(track.attr('data-src'));
     wavesurfer.on('ready', () => {
-      wavesurfer.play();
+      
       $(wavecontainer).removeClass('playing');
       $(wavecontainer).addClass('playing');
       $(wavecontainer).find('.player-button.playpause').html('Pause');
+      wavesurfer.play();
     });
     wavesurfer.load(track.attr('data-src'));
     // Remove playing from all other tracks.

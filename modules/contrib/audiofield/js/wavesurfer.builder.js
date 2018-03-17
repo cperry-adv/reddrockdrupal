@@ -65,7 +65,7 @@
       $(wavecontainer).find('.playlist .track').on('click', function () {
         Drupal.AudiofieldWavesurfer.Load(wavecontainer, wavesurfer, $(event.currentTarget));
 
-        Drupal.AudiofieldWavesurfer.PlayPause(wavecontainer, wavesurfer);
+       // Drupal.AudiofieldWavesurfer.PlayPause(wavecontainer, wavesurfer);
       });
 
       $(wavecontainer).find('.volume').on('change', function () {
@@ -96,12 +96,14 @@
 
   Drupal.AudiofieldWavesurfer.Load = function (wavecontainer, wavesurfer, track) {
     wavesurfer.on('ready', function () {
-      wavesurfer.play();
+      wavesurfer.load(track.attr('data-src'));
+      
       $(wavecontainer).removeClass('playing');
       $(wavecontainer).addClass('playing');
       $(wavecontainer).find('.player-button.playpause').html('Pause');
+      wavesurfer.play();
     });
-    wavesurfer.load(track.attr('data-src'));
+   // wavesurfer.load(track.attr('data-src'));
 
     $(wavecontainer).find('.track').removeClass('playing');
 
