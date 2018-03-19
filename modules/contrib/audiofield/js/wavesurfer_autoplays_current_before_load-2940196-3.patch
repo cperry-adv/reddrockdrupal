@@ -1,0 +1,58 @@
+diff --git a/js/wavesurfer.builder.es6.js b/js/wavesurfer.builder.es6.js
+index d6eeafb..626e1f4 100644
+--- a/js/wavesurfer.builder.es6.js
++++ b/js/wavesurfer.builder.es6.js
+@@ -93,8 +93,6 @@
+       $(wavecontainer).find('.playlist .track').on('click', () => {
+         // Load the track.
+         Drupal.AudiofieldWavesurfer.Load(wavecontainer, wavesurfer, $(event.currentTarget));
+-        // Play the track.
+-        Drupal.AudiofieldWavesurfer.PlayPause(wavecontainer, wavesurfer);
+       });
+ 
+       // Handle volume change.
+@@ -147,13 +145,13 @@
+    */
+   Drupal.AudiofieldWavesurfer.Load = (wavecontainer, wavesurfer, track) => {
+     // Load the track.
++    wavesurfer.load(track.attr('data-src'));
+     wavesurfer.on('ready', () => {
+-      wavesurfer.play();
+       $(wavecontainer).removeClass('playing');
+       $(wavecontainer).addClass('playing');
+       $(wavecontainer).find('.player-button.playpause').html('Pause');
++      wavesurfer.play();
+     });
+-    wavesurfer.load(track.attr('data-src'));
+     // Remove playing from all other tracks.
+     $(wavecontainer).find('.track').removeClass('playing');
+     // Set the class on this track.
+diff --git a/js/wavesurfer.builder.js b/js/wavesurfer.builder.js
+index 2271079..98870e0 100644
+--- a/js/wavesurfer.builder.js
++++ b/js/wavesurfer.builder.js
+@@ -64,8 +64,6 @@
+ 
+       $(wavecontainer).find('.playlist .track').on('click', function () {
+         Drupal.AudiofieldWavesurfer.Load(wavecontainer, wavesurfer, $(event.currentTarget));
+-
+-        Drupal.AudiofieldWavesurfer.PlayPause(wavecontainer, wavesurfer);
+       });
+ 
+       $(wavecontainer).find('.volume').on('change', function (event) {
+@@ -95,13 +93,13 @@
+   };
+ 
+   Drupal.AudiofieldWavesurfer.Load = function (wavecontainer, wavesurfer, track) {
++    wavesurfer.load(track.attr('data-src'));
+     wavesurfer.on('ready', function () {
+-      wavesurfer.play();
+       $(wavecontainer).removeClass('playing');
+       $(wavecontainer).addClass('playing');
+       $(wavecontainer).find('.player-button.playpause').html('Pause');
++      wavesurfer.play();
+     });
+-    wavesurfer.load(track.attr('data-src'));
+ 
+     $(wavecontainer).find('.track').removeClass('playing');
+ 
